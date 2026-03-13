@@ -5101,7 +5101,7 @@
           <PrintStyles />
           <div ref={topRef}><ISWRCover onNavigate={handleNavigate} /></div>
 
-          <div className="w-full max-w-4xl mx-auto bg-slate-50 p-2 md:p-8 relative shadow-2xl md:rounded-sm min-h-screen md:min-h-0 print-container">
+          <div className="w-full max-w-4xl mx-auto bg-slate-50 px-1 py-2 sm:px-2 md:p-8 relative shadow-2xl md:rounded-sm min-h-screen md:min-h-0 print-container">
 
             {/* 1. PERSONNEL */}
             <div ref={personnelRef} className="mb-4 flex items-center gap-2 pt-8 break-before-page">
@@ -5109,11 +5109,11 @@
               <div className="h-px bg-slate-300 flex-grow"></div>
               <button onClick={scrollToTop} className="no-print flex items-center gap-1 text-xs text-slate-600 hover:text-blue-600 transition-colors"><i data-lucide="arrow-up" style={{ width: 14, height: 14 }} /> Back to Cover</button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 break-inside-avoid">
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center"><span className="text-xs text-slate-600 font-bold uppercase mb-1">Total Manpower</span><span className="text-2xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="users" style={{ width: 20, height: 20 }} /> {personnelSummary.total.toLocaleString()}</span></div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center"><span className="text-xs text-slate-600 font-bold uppercase mb-1">Vacant Beds</span><span className="text-2xl font-bold text-green-600 flex items-center gap-2"><i data-lucide="bed-double" style={{ width: 20, height: 20 }} /> {personnelSummary.empty}</span></div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center"><span className="text-xs text-slate-600 font-bold uppercase mb-1">Turkish Staff</span><span className="text-2xl font-bold text-red-600 flex items-center gap-2"><i data-lucide="flag" style={{ width: 20, height: 20 }} /> {personnelSummary.turkish}</span></div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center"><span className="text-xs text-slate-600 font-bold uppercase mb-1">Foreign (TCN)</span><span className="text-2xl font-bold text-blue-600 flex items-center gap-2"><i data-lucide="user" style={{ width: 20, height: 20 }} /> {personnelSummary.tcn}</span></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6 break-inside-avoid">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Total Manpower</span><span className="text-2xl font-bold text-slate-900 flex items-center gap-2 text-center"><i data-lucide="users" style={{ width: 20, height: 20 }} /> {personnelSummary.total.toLocaleString()}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Vacant Beds</span><span className="text-2xl font-bold text-green-600 flex items-center gap-2 text-center"><i data-lucide="bed-double" style={{ width: 20, height: 20 }} /> {personnelSummary.empty}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Turkish Staff</span><span className="text-2xl font-bold text-red-600 flex items-center gap-2 text-center"><i data-lucide="flag" style={{ width: 20, height: 20 }} /> {personnelSummary.turkish}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Foreign (TCN)</span><span className="text-2xl font-bold text-blue-600 flex items-center gap-2 text-center"><i data-lucide="user" style={{ width: 20, height: 20 }} /> {personnelSummary.tcn}</span></div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 overflow-hidden break-inside-avoid">
