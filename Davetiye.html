@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Yusuf & Kevser - Düğün Davetiyesi</title>
+    
+    <!-- Google Fonts: Zarif başlıklar ve okunaklı metinler için -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome İkonları (Butonlar ve süslemeler için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- GENEL AYARLAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfbf7; /* Kırık beyaz/krem arka plan */
+            color: #2c241b; /* Koyu kahve/antrasit zarif metin rengi */
+            overflow-x: hidden;
+        }
+
+        /* --- HAREKETLİ ARKA PLAN (BLOBLAR) --- */
+        .background-container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            background: #fdfbf7;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px); /* Işıkları yumuşatıp dağıtır */
+            opacity: 0.6;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            background: #e6d3a3; /* Soft Altın/Kum */
+            top: -10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: #f0e1d8; /* Pudra/Soft Gül */
+            bottom: -20%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            background: #d4e0d9; /* Soft Adaçayı Yeşili */
+            top: 40%;
+            left: 50%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 30px) scale(1.1); }
+            100% { transform: translate(-30px, 50px) scale(0.9); }
+        }
+
+        /* --- ANA KONTEYNER VE CAM EFEKTİ (GLASSMORPHISM) --- */
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45); /* Yarı saydam beyaz */
+            backdrop-filter: blur(16px); /* Buzlu cam efekti */
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6); /* İnce parlak kenarlık */
+            box-shadow: 0 8px 32px 0 rgba(133, 118, 105, 0.15); /* Yumuşak gölge */
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* İnce iç çerçeve detayı (Fotoğraftaki gibi) */
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid rgba(189, 172, 149, 0.3);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        /* --- TİPOGRAFİ VE İÇERİK --- */
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #1a1510;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .names i {
+            font-size: 1.5rem;
+            color: #b59b72; /* Yüzük rengi altın */
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        .families {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .families div {
+            border-bottom: 1px solid #2c241b;
+            padding-bottom: 5px;
+        }
+
+        .message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+        }
+
+        /* Tarih Bölümü Tasarımı */
+        .date-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .date-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .date-side span {
+            border-top: 1px solid #2c241b;
+            border-bottom: 1px solid #2c241b;
+            padding: 5px 15px;
+            margin-top: 5px;
+        }
+
+        .date-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .date-center .month {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .date-center .day {
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 400;
+            margin: 5px 0;
+        }
+
+        .date-center .year {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .location-section {
+            margin-bottom: 2rem;
+        }
+
+        .location-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .location-address {
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* --- GERİ SAYIM SAYACI --- */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(189, 172, 149, 0.5);
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 12px;
+            min-width: 60px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .countdown-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: 'Cormorant Garamond', serif;
+            color: #b59b72;
+        }
+
+        .countdown-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3px;
+            font-weight: 500;
+        }
+
+        /* --- AKSİYON BUTONLARI --- */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-map {
+            background: rgba(181, 155, 114, 0.15);
+            color: #8c734b;
+            border: 1px solid rgba(181, 155, 114, 0.3);
+        }
+
+        .btn-map:hover { background: rgba(181, 155, 114, 0.25); transform: translateY(-2px); }
+
+        .btn-calendar {
+            background: rgba(44, 36, 27, 0.08);
+            color: #2c241b;
+            border: 1px solid rgba(44, 36, 27, 0.15);
+        }
+
+        .btn-calendar:hover { background: rgba(44, 36, 27, 0.15); transform: translateY(-2px); }
+
+        .btn-whatsapp {
+            background: rgba(37, 211, 102, 0.15);
+            color: #128c7e;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover { background: rgba(37, 211, 102, 0.25); transform: translateY(-2px); }
+
+        /* Mobil Uyumlu İnce Ayarlar */
+        @media (max-width: 480px) {
+            .names { font-size: 2.8rem; }
+            .families { font-size: 0.95rem; gap: 1rem; }
+            .message { font-size: 1.2rem; }
+            .date-center .day { font-size: 3rem; }
+            .glass-card { padding: 2.5rem 1.5rem; }
+            .countdown-item { min-width: 55px; padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hareketli Renk Hüzmeleri -->
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Davetiye Kartı İçeriği -->
+    <div class="wrapper">
+        <div class="glass-card">
+            
+            <div class="names">
+                Taha Yusuf <br>
+                <i class="fa-solid fa-rings-wedding" style="font-size: 2rem; margin: 10px 0;"></i><br>
+                Kevser
+            </div>
+
+            <div class="families">
+                <div>ŞAHİN AİLESİ</div>
+                <div>BAŞCI AİLESİ</div>
+            </div>
+
+            <div class="message">
+                "Bu özel günümüzde sizleri de aramızda görmekten mutluluk duyarız."
+            </div>
+
+            <div class="date-section">
+                <div class="date-side">
+                    <span>PAZAR</span>
+                </div>
+                <div class="date-center">
+                    <div class="month">MAYIS</div>
+                    <div class="day">03</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="date-side">
+                    <span>19:00</span>
+                </div>
+            </div>
+
+            <div class="location-section">
+                <div class="location-title">KAYA EVENT DAVET EVİ</div>
+                <div class="location-address">
+                    Akçağlayan Mah. Çiçek Cd. İnegöl Sk. No: 15<br>
+                    Yıldırım / Bursa
+                </div>
+            </div>
+
+            <!-- Geri Sayım Sayacı -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Gün</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Saat</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Dakika</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Saniye</span>
+                </div>
+            </div>
+
+            <!-- Etkileşimli Butonlar -->
+            <div class="action-buttons">
+                <!-- Harita Linki: Mekanın Google Maps arama linki -->
+                <a href="https://maps.google.com/?q=Kaya+Event+Davet+Evi,+Akçağlayan+Mah.+Çiçek+Cd.+İnegöl+Sk.+No:+15+Yıldırım+/+Bursa" target="_blank" class="btn btn-map">
+                    <i class="fa-solid fa-location-dot"></i> Haritada Yol Tarifi Al
+                </a>
+                
+                <!-- Takvim Linki: Google Takvime ekleme parametreleri -->
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taha+Yusuf+%26+Kevser+Düğün&dates=20260503T160000Z/20260503T200000Z&details=Düğünümüze+bekliyoruz!&location=Kaya+Event+Davet+Evi,+Bursa" target="_blank" class="btn btn-calendar">
+                    <i class="fa-regular fa-calendar-plus"></i> Takvime Kaydet
+                </a>
+
+                <!-- WhatsApp LCV Linki: "905555555555" Yazan yeri KENDİ NUMARAN ile değiştir -->
+                <a href="https://wa.me/905555555555?text=Merhaba,%20Taha%20Yusuf%20ve%20Kevser'in%20düğününe%20katılıyorum!" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp ile LCV Bildir
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Geri Sayım Sayacı JavaScript Kodları -->
+    <script>
+        // Düğün Tarihi: 3 Mayıs 2026, Saat 19:00
+        const countDownDate = new Date("May 3, 2026 19:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            // Zaman hesaplamaları
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // HTML'e yazdırma (Sayılar 10'dan küçükse başına 0 eklenir)
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            // Tarih geçtiyse
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "<div style='font-family: Cormorant Garamond; font-size: 1.5rem; font-style: italic; color: #b59b72;'>Büyük gün geldi!</div>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
