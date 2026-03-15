@@ -2,449 +2,571 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Taha Yusuf & Kevser - Düğün Davetiyesi</title>
     
-    <!-- Google Fonts: Zarif başlıklar ve okunaklı metinler için -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome İkonları (Butonlar ve süslemeler için) -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* --- GENEL AYARLAR --- */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Mobildeki mavi tıklama efektini kaldırır */
         }
 
         body, html {
-            height: 100%;
+            width: 100%; height: 100%;
             font-family: 'Montserrat', sans-serif;
-            background-color: #fdfbf7; /* Kırık beyaz/krem arka plan */
-            color: #2c241b; /* Koyu kahve/antrasit zarif metin rengi */
+            background-color: #0f0c08; /* Çok koyu, premium bir kahve/siyah */
+            color: #fdfbf7;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* --- HAREKETLİ ARKA PLAN (BLOBLAR) --- */
-        .background-container {
+        /* --- SİHİRLİ CANVAS ARKA PLANI --- */
+        #magic-canvas {
             position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            overflow: hidden;
-            background: #fdfbf7;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: 0; /* İçeriklerin arkasında */
+            pointer-events: none; /* Tıklamalar canvas'ın altındaki elementlere geçsin */
         }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px); /* Işıkları yumuşatıp dağıtır */
-            opacity: 0.6;
-            animation: float 20s infinite ease-in-out alternate;
+        /* --- SİNEMATİK INTRO EKRANI --- */
+        #intro {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #0f0c08;
+            z-index: 9999;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: opacity 1.5s ease, visibility 1.5s ease;
         }
 
-        .blob-1 {
-            width: 400px;
-            height: 400px;
-            background: #e6d3a3; /* Soft Altın/Kum */
-            top: -10%;
-            left: -10%;
-            animation-delay: 0s;
+        #intro.fade-out {
+            opacity: 0;
+            visibility: hidden;
         }
 
-        .blob-2 {
-            width: 500px;
-            height: 500px;
-            background: #f0e1d8; /* Pudra/Soft Gül */
-            bottom: -20%;
-            right: -10%;
-            animation-delay: -5s;
+        .rings-svg {
+            width: 150px; height: 100px;
+            overflow: visible;
         }
 
-        .blob-3 {
-            width: 300px;
-            height: 300px;
-            background: #d4e0d9; /* Soft Adaçayı Yeşili */
-            top: 40%;
-            left: 50%;
-            animation-delay: -10s;
+        .ring-path {
+            fill: none;
+            stroke: #d4af37; /* Altın rengi */
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawRing 2.5s ease-in-out forwards;
         }
 
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(50px, 30px) scale(1.1); }
-            100% { transform: translate(-30px, 50px) scale(0.9); }
+        .ring-path.delayed { animation-delay: 0.5s; }
+
+        @keyframes drawRing {
+            to { stroke-dashoffset: 0; }
         }
 
-        /* --- ANA KONTEYNER VE CAM EFEKTİ (GLASSMORPHISM) --- */
-        .wrapper {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1rem;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.45); /* Yarı saydam beyaz */
-            backdrop-filter: blur(16px); /* Buzlu cam efekti */
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.6); /* İnce parlak kenarlık */
-            box-shadow: 0 8px 32px 0 rgba(133, 118, 105, 0.15); /* Yumuşak gölge */
-            border-radius: 30px;
-            padding: 3rem 2rem;
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* İnce iç çerçeve detayı (Fotoğraftaki gibi) */
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
-            border: 1px solid rgba(189, 172, 149, 0.3);
-            border-radius: 20px;
-            pointer-events: none;
-        }
-
-        /* --- TİPOGRAFİ VE İÇERİK --- */
-        .names {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.5rem;
-            color: #1a1510;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-        }
-
-        .names i {
-            font-size: 1.5rem;
-            color: #b59b72; /* Yüzük rengi altın */
-            vertical-align: middle;
-            margin: 0 10px;
-        }
-
-        .families {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+        .intro-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .families div {
-            border-bottom: 1px solid #2c241b;
-            padding-bottom: 5px;
-        }
-
-        .message {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            font-style: italic;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-        }
-
-        /* Tarih Bölümü Tasarımı */
-        .date-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 2rem;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .date-side {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 2px;
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeInOut 3s ease-in-out forwards;
+            animation-delay: 1.5s;
         }
 
-        .date-side span {
-            border-top: 1px solid #2c241b;
-            border-bottom: 1px solid #2c241b;
-            padding: 5px 15px;
-            margin-top: 5px;
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            30% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
         }
 
-        .date-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .date-center .month {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        .date-center .day {
-            font-size: 3.5rem;
-            line-height: 1;
-            font-weight: 400;
-            margin: 5px 0;
-        }
-
-        .date-center .year {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        .location-section {
-            margin-bottom: 2rem;
-        }
-
-        .location-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .location-address {
-            font-size: 0.9rem;
-            font-style: italic;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        /* --- GERİ SAYIM SAYACI --- */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px dashed rgba(189, 172, 149, 0.5);
-        }
-
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 10px;
-            border-radius: 12px;
-            min-width: 60px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-            border: 1px solid rgba(255,255,255,0.8);
-        }
-
-        .countdown-value {
-            font-size: 1.5rem;
-            font-weight: 600;
-            font-family: 'Cormorant Garamond', serif;
-            color: #b59b72;
-        }
-
-        .countdown-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 3px;
-            font-weight: 500;
-        }
-
-        /* --- AKSİYON BUTONLARI --- */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        /* --- İÇERİK BÖLÜMLERİ (TAM EKRAN SECTIONS) --- */
+        .content-wrapper {
             position: relative;
             z-index: 10;
         }
 
-        .btn {
+        section {
+            min-height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 20px;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* İnce detay çizgileri */
+        .divider {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0), rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0));
+            margin: 2rem auto;
+        }
+
+        /* Kaydırma ile beliren elementler (Scroll Reveal) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- TİPOGRAFİ --- */
+        .hero-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 15vw, 7rem); /* Ekrana göre dinamik boyut */
+            color: #fdfbf7;
+            line-height: 1.1;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .hero-names span {
+            display: block;
+            color: #d4af37;
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin: 10px 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(212, 175, 55, 0.7);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -15px); }
+            60% { transform: translate(-50%, -7px); }
+        }
+
+        .message-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.5rem, 6vw, 2.5rem);
+            font-style: italic;
+            line-height: 1.5;
+            color: #e6d3a3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .families-text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            margin-top: 3rem;
+            color: #bfa87a;
+        }
+
+        .giant-date {
+            font-family: 'Cormorant Garamond', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .giant-date .day {
+            font-size: clamp(6rem, 25vw, 12rem);
+            line-height: 1;
+            color: #d4af37;
+            text-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .giant-date .month-year {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            letter-spacing: 8px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .giant-date .time {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            color: #a8946f;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 10px 20px;
             border-radius: 50px;
+        }
+
+        .location-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .location-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .location-address {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #d1c4ab;
+            font-weight: 300;
+        }
+
+        /* Geri Sayım */
+        .countdown-modern {
+            display: flex;
+            justify-content: center;
+            gap: clamp(15px, 4vw, 30px);
+            margin-top: 3rem;
+        }
+
+        .cd-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cd-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            color: #fdfbf7;
+        }
+
+        .cd-lbl {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #a8946f;
+            text-transform: uppercase;
+        }
+
+        /* --- YÜZEN MENÜ (FLOATING DOCK) --- */
+        .floating-dock {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 12, 8, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .dock-btn {
+            color: #d1c4ab;
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.7rem;
+            gap: 5px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            cursor: pointer;
-            border: none;
+            width: 60px;
         }
 
-        .btn-map {
-            background: rgba(181, 155, 114, 0.15);
-            color: #8c734b;
-            border: 1px solid rgba(181, 155, 114, 0.3);
+        .dock-btn i {
+            font-size: 1.3rem;
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
         }
 
-        .btn-map:hover { background: rgba(181, 155, 114, 0.25); transform: translateY(-2px); }
-
-        .btn-calendar {
-            background: rgba(44, 36, 27, 0.08);
-            color: #2c241b;
-            border: 1px solid rgba(44, 36, 27, 0.15);
+        .dock-btn:hover i, .dock-btn:active i {
+            background: #d4af37;
+            color: #0f0c08;
+            transform: scale(1.1);
         }
 
-        .btn-calendar:hover { background: rgba(44, 36, 27, 0.15); transform: translateY(-2px); }
-
-        .btn-whatsapp {
-            background: rgba(37, 211, 102, 0.15);
-            color: #128c7e;
-            border: 1px solid rgba(37, 211, 102, 0.3);
+        /* Sayfa sonuna boşluk (dock menü üstüne binmesin diye) */
+        .footer-space {
+            height: 100px;
         }
 
-        .btn-whatsapp:hover { background: rgba(37, 211, 102, 0.25); transform: translateY(-2px); }
-
-        /* Mobil Uyumlu İnce Ayarlar */
-        @media (max-width: 480px) {
-            .names { font-size: 2.8rem; }
-            .families { font-size: 0.95rem; gap: 1rem; }
-            .message { font-size: 1.2rem; }
-            .date-center .day { font-size: 3rem; }
-            .glass-card { padding: 2.5rem 1.5rem; }
-            .countdown-item { min-width: 55px; padding: 8px; }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Hareketli Renk Hüzmeleri -->
-    <div class="background-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <!-- Sinematik Intro -->
+    <div id="intro">
+        <svg class="rings-svg" viewBox="0 0 150 100">
+            <!-- Sol Yüzük -->
+            <circle cx="55" cy="50" r="30" class="ring-path" />
+            <!-- Sağ Yüzük -->
+            <circle cx="95" cy="50" r="30" class="ring-path delayed" />
+        </svg>
+        <div class="intro-text">BİR HİKAYE BAŞLIYOR...</div>
     </div>
 
-    <!-- Davetiye Kartı İçeriği -->
-    <div class="wrapper">
-        <div class="glass-card">
-            
-            <div class="names">
-                Taha Yusuf <br>
-                <i class="fa-solid fa-rings-wedding" style="font-size: 2rem; margin: 10px 0;"></i><br>
+    <!-- Sihirli Etkileşimli Arka Plan -->
+    <canvas id="magic-canvas"></canvas>
+
+    <!-- İçerik -->
+    <div class="content-wrapper">
+        
+        <!-- 1. Ekran: İsimler -->
+        <section id="hero">
+            <div class="hero-names reveal">
+                Taha Yusuf
+                <span>&</span>
                 Kevser
             </div>
+            
+            <div class="scroll-indicator">
+                Hikayeyi Keşfet
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </section>
 
-            <div class="families">
+        <!-- 2. Ekran: Mesaj ve Aileler -->
+        <section>
+            <div class="message-text reveal">
+                "Bu özel günümüzde, hayatımızı birleştirirken sizleri de yanımızda görmekten mutluluk duyarız."
+            </div>
+            <div class="divider reveal"></div>
+            <div class="families-text reveal">
                 <div>ŞAHİN AİLESİ</div>
+                <div style="font-size: 0.8rem; color: #7a6b52;">&</div>
                 <div>BAŞCI AİLESİ</div>
             </div>
+        </section>
 
-            <div class="message">
-                "Bu özel günümüzde sizleri de aramızda görmekten mutluluk duyarız."
+        <!-- 3. Ekran: Tarih ve Zaman -->
+        <section>
+            <div class="giant-date reveal">
+                <div class="day">03</div>
+                <div class="month-year">Mayıs 2026</div>
+                <div class="month-year" style="font-size: 1rem; color:#a8946f; letter-spacing: 4px; margin-top:0;">PAZAR</div>
+                <div class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i> 19:00</div>
             </div>
 
-            <div class="date-section">
-                <div class="date-side">
-                    <span>PAZAR</span>
-                </div>
-                <div class="date-center">
-                    <div class="month">MAYIS</div>
-                    <div class="day">03</div>
-                    <div class="year">2026</div>
-                </div>
-                <div class="date-side">
-                    <span>19:00</span>
-                </div>
+            <div class="countdown-modern reveal">
+                <div class="cd-item"><span class="cd-val" id="days">00</span><span class="cd-lbl">Gün</span></div>
+                <div class="cd-item"><span class="cd-val">:</span></div>
+                <div class="cd-item"><span class="cd-val" id="hours">00</span><span class="cd-lbl">Saat</span></div>
+                <div class="cd-item"><span class="cd-val">:</span></div>
+                <div class="cd-item"><span class="cd-val" id="minutes">00</span><span class="cd-lbl">Dakika</span></div>
             </div>
+        </section>
 
-            <div class="location-section">
-                <div class="location-title">KAYA EVENT DAVET EVİ</div>
+        <!-- 4. Ekran: Mekan -->
+        <section>
+            <div class="location-box reveal">
+                <div class="location-title">Kaya Event Davet Evi</div>
                 <div class="location-address">
                     Akçağlayan Mah. Çiçek Cd. İnegöl Sk. No: 15<br>
                     Yıldırım / Bursa
                 </div>
             </div>
+        </section>
 
-            <!-- Geri Sayım Sayacı -->
-            <div class="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-value" id="days">00</span>
-                    <span class="countdown-label">Gün</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="hours">00</span>
-                    <span class="countdown-label">Saat</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="minutes">00</span>
-                    <span class="countdown-label">Dakika</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="seconds">00</span>
-                    <span class="countdown-label">Saniye</span>
-                </div>
-            </div>
-
-            <!-- Etkileşimli Butonlar -->
-            <div class="action-buttons">
-                <!-- Harita Linki: Mekanın Google Maps arama linki -->
-                <a href="https://maps.google.com/?q=Kaya+Event+Davet+Evi,+Akçağlayan+Mah.+Çiçek+Cd.+İnegöl+Sk.+No:+15+Yıldırım+/+Bursa" target="_blank" class="btn btn-map">
-                    <i class="fa-solid fa-location-dot"></i> Haritada Yol Tarifi Al
-                </a>
-                
-                <!-- Takvim Linki: Google Takvime ekleme parametreleri -->
-                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taha+Yusuf+%26+Kevser+Düğün&dates=20260503T160000Z/20260503T200000Z&details=Düğünümüze+bekliyoruz!&location=Kaya+Event+Davet+Evi,+Bursa" target="_blank" class="btn btn-calendar">
-                    <i class="fa-regular fa-calendar-plus"></i> Takvime Kaydet
-                </a>
-
-                <!-- WhatsApp LCV Linki: "905555555555" Yazan yeri KENDİ NUMARAN ile değiştir -->
-                <a href="https://wa.me/905555555555?text=Merhaba,%20Taha%20Yusuf%20ve%20Kevser'in%20düğününe%20katılıyorum!" target="_blank" class="btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp ile LCV Bildir
-                </a>
-            </div>
-
-        </div>
+        <div class="footer-space"></div>
     </div>
 
-    <!-- Geri Sayım Sayacı JavaScript Kodları -->
-    <script>
-        // Düğün Tarihi: 3 Mayıs 2026, Saat 19:00
-        const countDownDate = new Date("May 3, 2026 19:00:00").getTime();
+    <!-- Sabit Alt Menü (Uygulama Hissi Verir) -->
+    <div class="floating-dock">
+        <a href="https://maps.google.com/?q=Kaya+Event+Davet+Evi,+Akçağlayan+Mah.+Çiçek+Cd.+İnegöl+Sk.+No:+15+Yıldırım+/+Bursa" target="_blank" class="dock-btn">
+            <i class="fa-solid fa-location-arrow"></i>
+            Harita
+        </a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taha+Yusuf+%26+Kevser+Düğün&dates=20260503T160000Z/20260503T200000Z&details=Düğünümüze+bekliyoruz!&location=Kaya+Event+Davet+Evi,+Bursa" target="_blank" class="dock-btn">
+            <i class="fa-regular fa-calendar-check"></i>
+            Takvim
+        </a>
+        <a href="https://wa.me/905555555555?text=Merhaba,%20Taha%20Yusuf%20ve%20Kevser'in%20düğününe%20katılıyorum!" target="_blank" class="dock-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            LCV
+        </a>
+    </div>
 
-        const x = setInterval(function() {
+    <script>
+        // --- 1. INTRO ANİMASYONUNU GİZLEME ---
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('intro').classList.add('fade-out');
+                // Sayfa açıldığında ilk elemanları tetikle
+                revealElements();
+            }, 4000); // 4 saniye sonra intro kaybolur
+        });
+
+        // --- 2. SCROLL REVEAL (Kaydırdıkça belirme efekti) ---
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Ekrana 100px girince tetiklensin
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        // Hem kaydırıldığında hem de dokunulduğunda kontrol et
+        window.addEventListener('scroll', revealElements);
+        window.addEventListener('touchmove', revealElements);
+
+
+        // --- 3. SİHİRLİ CANVAS ARKA PLANI VE DOKUNMATİK EFEKT ---
+        // Bu kod ekrana dokunulduğunda ve sürüklendiğinde altın yaldızlar çıkarır
+        const canvas = document.getElementById('magic-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor(x, y, isTouch = false) {
+                this.x = x;
+                this.y = y;
+                // Dokunma ile oluşanlar daha hızlı ve rastgele, arka plandakiler yavaş süzülür
+                this.vx = isTouch ? (Math.random() - 0.5) * 5 : (Math.random() - 0.5) * 1;
+                this.vy = isTouch ? (Math.random() - 0.5) * 5 : (Math.random() * -1) - 0.5; // Arka plan hep yukarı uçar
+                this.size = Math.random() * 3 + 1;
+                this.life = 1; // 1'den 0'a düşer
+                this.decay = isTouch ? Math.random() * 0.05 + 0.02 : Math.random() * 0.01 + 0.002;
+                this.color = isTouch ? `rgba(255, 215, 0, ` : `rgba(212, 175, 55, `; // Altın sarısı
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.life -= this.decay;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color + this.life + ')';
+                ctx.fill();
+                // Dokunulanlara parlama efekti
+                if(this.decay > 0.02) {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = "#d4af37";
+                } else {
+                    ctx.shadowBlur = 0;
+                }
+            }
+        }
+
+        // Arka planda kendiliğinden uydurulan sabit zerreler
+        function spawnBackgroundParticles() {
+            if (particles.length < 50 && Math.random() < 0.1) {
+                particles.push(new Particle(Math.random() * width, height + 10, false));
+            }
+        }
+
+        // Dokunma / Fare hareketleri ile sihirli tozlar ekleme
+        function addTouchParticles(x, y) {
+            for (let i = 0; i < 5; i++) {
+                particles.push(new Particle(x, y, true));
+            }
+        }
+
+        // Mobil Dokunmatik Eventleri
+        window.addEventListener('touchmove', (e) => {
+            // Ekranda scroll yapmayı engellememek için preventDefault kullanmıyoruz
+            addTouchParticles(e.touches[0].clientX, e.touches[0].clientY);
+        });
+        
+        window.addEventListener('touchstart', (e) => {
+            addTouchParticles(e.touches[0].clientX, e.touches[0].clientY);
+        });
+
+        // Bilgisayar (Fare) Eventleri
+        window.addEventListener('mousemove', (e) => {
+            addTouchParticles(e.clientX, e.clientY);
+        });
+
+        // Animasyon Döngüsü
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height); // Önceki kareyi temizle
+            
+            spawnBackgroundParticles();
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                if (particles[i].life <= 0) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+
+        // --- 4. GERİ SAYIM ---
+        const countDownDate = new Date("May 3, 2026 19:00:00").getTime();
+        setInterval(function() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
 
-            // Zaman hesaplamaları
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // HTML'e yazdırma (Sayılar 10'dan küçükse başına 0 eklenir)
-            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-
-            // Tarih geçtiyse
-            if (distance < 0) {
-                clearInterval(x);
-                document.querySelector(".countdown").innerHTML = "<div style='font-family: Cormorant Garamond; font-size: 1.5rem; font-style: italic; color: #b59b72;'>Büyük gün geldi!</div>";
-            }
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
         }, 1000);
+
     </script>
 </body>
 </html>
