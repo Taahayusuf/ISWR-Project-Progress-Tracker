@@ -4075,21 +4075,27 @@
       { item: 'Excavation / ISWR', unit: 'm³', total: 2140104, actual: 2089913, remaining: 2140104 - 2089913, percent: ((2089913 / 2140104) * 100).toFixed(2), weeklyPlanned: 9630, weeklyActual: 3157, category: 'Earthworks', color: 'bg-stone-100 text-stone-900', barColor: '#78716c' },
       { item: 'Backfilling / ISWR', unit: 'm³', total: 1957813, actual: 1876050, remaining: 1957813 - 1876050, percent: ((1876050 / 1957813) * 100).toFixed(2), weeklyPlanned: 971, weeklyActual: 2697, category: 'Earthworks', color: 'bg-stone-100 text-stone-900', barColor: '#78716c' },
 
-      // Tanks Civil
-      { item: 'Lean Concrete (Tanks)', unit: 'm³', total: 1337, actual: 1337, remaining: 0, percent: 100.00, weeklyPlanned: 0, weeklyActual: 0, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Protection Concrete (Tanks)', unit: 'm³', total: 585, actual: 585, remaining: 0, percent: 100.00, weeklyPlanned: 0, weeklyActual: 0, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Formwork (Tanks)', unit: 'm²', total: 11920, actual: 11920, remaining: 0, percent: 100.00, weeklyPlanned: 81, weeklyActual: 0, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Rebar (Tanks)', unit: 'ton', total: 1977, actual: 1977, remaining: 0, percent: 100.00, weeklyPlanned: 16, weeklyActual: 0, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Reinforced Concrete (Tanks)', unit: 'm³', total: 9005, actual: 9005, remaining: 0, percent: 100.00, weeklyPlanned: 0, weeklyActual: 0, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Select Fill (Tanks)', unit: 'm³', total: 125208, actual: 125208, remaining: 0, percent: 100.00, weeklyPlanned: 80, weeklyActual: 1197, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'HDPE Membrane (Tanks)', unit: 'm²', total: 146167, actual: 146167, remaining: 0, percent: 100.00, weeklyPlanned: 7867, weeklyActual: 3134, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
-      { item: 'Clean Sand (Tanks)', unit: 'm³', total: 56074, actual: 56074, remaining: 0, percent: 100.00, weeklyPlanned: 514, weeklyActual: 514, category: 'Civ: Tanks', color: 'bg-orange-100 text-orange-900', barColor: '#f97316' },
+      // Buildings Civil
+      { item: 'Buildings - Lean Concrete', unit: 'm³', total: 1255, actual: 1249, remaining: 1255 - 1249, percent: ((1249 / 1255) * 100).toFixed(2), weeklyPlanned: 18, weeklyActual: 0, category: 'Civ: Buildings', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
+      { item: 'Buildings - Protection Concrete', unit: 'm³', total: 390, actual: 377, remaining: 390 - 377, percent: ((377 / 390) * 100).toFixed(2), weeklyPlanned: 6, weeklyActual: 0, category: 'Civ: Buildings', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
+      { item: 'Buildings - Reinforced Concrete', unit: 'm³', total: 5878, actual: 5238, remaining: 5878 - 5238, percent: ((5238 / 5878) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 0, category: 'Civ: Buildings', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
+      { item: 'Buildings - Rebar', unit: 'ton', total: 1090, actual: 1024, remaining: 1090 - 1024, percent: ((1024 / 1090) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 1, category: 'Civ: Buildings', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
 
-      // Bldgs & Others Civil
-      { item: 'Lean Conc. (Bldgs/Others)', unit: 'm³', total: 1255 + 189 + 800, actual: 1247 + 139 + 0, remaining: (1255 + 189 + 800) - (1247 + 139 + 0), percent: (((1247 + 139 + 0) / (1255 + 189 + 800)) * 100).toFixed(2), weeklyPlanned: 514 + 0 + 0, weeklyActual: 17 + 3 + 0, category: 'Civ: Bldgs', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
-      { item: 'Prot. Conc. (Bldgs/Others)', unit: 'm³', total: 390 + 95, actual: 377 + 41, remaining: (390 + 95) - (377 + 41), percent: (((377 + 41) / (390 + 95)) * 100).toFixed(2), weeklyPlanned: 0 + 0, weeklyActual: 5 + 0, category: 'Civ: Bldgs', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
-      { item: 'Reinf. Conc. (Bldgs/Others)', unit: 'm³', total: 5878 + 1742 + 5567 + 2827, actual: 5238 + 1344 + 361 + 0, remaining: (5878 + 1742 + 5567 + 2827) - (5238 + 1344 + 361 + 0), percent: (((5238 + 1344 + 361 + 0) / (5878 + 1742 + 5567 + 2827)) * 100).toFixed(2), weeklyPlanned: 18 + 0 + 1 + 0, weeklyActual: 6 + 25 + 2 + 0, category: 'Civ: Bldgs', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
-      { item: 'Rebar (Bldgs/Others)', unit: 'ton', total: 1090 + 433 + 252 + 252, actual: 1024 + 301 + 48 + 0, remaining: (1090 + 433 + 252 + 252) - (1024 + 301 + 48 + 0), percent: (((1024 + 301 + 48 + 0) / (1090 + 433 + 252 + 252)) * 100).toFixed(2), weeklyPlanned: 1 + 0 + 1 + 0, weeklyActual: 11 + 0 + 0 + 0, category: 'Civ: Bldgs', color: 'bg-yellow-100 text-yellow-900', barColor: '#eab308' },
+      // Shafts Civil
+      { item: 'Shafts - Lean Concrete', unit: 'm³', total: 189, actual: 139, remaining: 189 - 139, percent: ((139 / 189) * 100).toFixed(2), weeklyPlanned: 6, weeklyActual: 0, category: 'Civ: Shafts', color: 'bg-amber-100 text-amber-900', barColor: '#f59e0b' },
+      { item: 'Shafts - Protection Concrete', unit: 'm³', total: 95, actual: 41, remaining: 95 - 41, percent: ((41 / 95) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 0, category: 'Civ: Shafts', color: 'bg-amber-100 text-amber-900', barColor: '#f59e0b' },
+      { item: 'Shafts - Reinforced Concrete', unit: 'm³', total: 1742, actual: 1344, remaining: 1742 - 1344, percent: ((1344 / 1742) * 100).toFixed(2), weeklyPlanned: 60, weeklyActual: 0, category: 'Civ: Shafts', color: 'bg-amber-100 text-amber-900', barColor: '#f59e0b' },
+      { item: 'Shafts - Rebar', unit: 'ton', total: 433, actual: 302, remaining: 433 - 302, percent: ((302 / 433) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 1, category: 'Civ: Shafts', color: 'bg-amber-100 text-amber-900', barColor: '#f59e0b' },
+
+      // UG Items Civil
+      { item: 'UG Items - Reinforced Concrete', unit: 'm³', total: 5567, actual: 398, remaining: 5567 - 398, percent: ((398 / 5567) * 100).toFixed(2), weeklyPlanned: 2, weeklyActual: 37, category: 'Civ: UG Items', color: 'bg-lime-100 text-lime-900', barColor: '#84cc16' },
+      { item: 'UG Items - Rebar', unit: 'ton', total: 252, actual: 52, remaining: 252 - 52, percent: ((52 / 252) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 4, category: 'Civ: UG Items', color: 'bg-lime-100 text-lime-900', barColor: '#84cc16' },
+
+      // Drainage Channel Civil
+      { item: 'Drainage Channel - Lean Concrete', unit: 'm³', total: 800, actual: 8, remaining: 800 - 8, percent: ((8 / 800) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 8, category: 'Civ: Drainage', color: 'bg-cyan-100 text-cyan-900', barColor: '#06b6d4' },
+      { item: 'Drainage Channel - Reinforced Concrete', unit: 'm³', total: 2827, actual: 6, remaining: 2827 - 6, percent: ((6 / 2827) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 6, category: 'Civ: Drainage', color: 'bg-cyan-100 text-cyan-900', barColor: '#06b6d4' },
+      { item: 'Drainage Channel - Rebar', unit: 'ton', total: 252, actual: 1, remaining: 252 - 1, percent: ((1 / 252) * 100).toFixed(2), weeklyPlanned: 0, weeklyActual: 1, category: 'Civ: Drainage', color: 'bg-cyan-100 text-cyan-900', barColor: '#06b6d4' },
+
 
       // Tanks Mechanical
       { item: 'Station Piping', unit: 'wdi', total: 108913, actual: 26780, remaining: 108913 - 26780, percent: 24.59, weeklyPlanned: 0, weeklyActual: 1128, category: 'Mech: Tanks', color: 'bg-indigo-100 text-indigo-900', barColor: '#4f46e5' },
@@ -6146,6 +6152,47 @@
         refs[section]?.current?.scrollIntoView({ behavior: 'smooth' });
       };
       const scrollToTop = () => { topRef.current?.scrollIntoView({ behavior: 'smooth' }); };
+      const formatKeyQtyValue = (value, category) => {
+        if (category === 'Earthworks' && Math.abs(value) >= 1000) {
+          const compact = Math.abs(value) >= 10000 ? (value / 1000).toFixed(0) : (value / 1000).toFixed(1);
+          return `${compact.replace('.0', '')}k`;
+        }
+        return value.toLocaleString();
+      };
+
+      const keyQuantityCategories = Object.entries(
+        keyQuantities.reduce((acc, item) => {
+          if (!acc[item.category]) acc[item.category] = [];
+          acc[item.category].push(item);
+          return acc;
+        }, {})
+      ).map(([cat, items]) => {
+        const totalScope = items.reduce((sum, item) => sum + item.total, 0);
+        const actualScope = items.reduce((sum, item) => sum + item.actual, 0);
+        const weightedPercent = totalScope ? (actualScope / totalScope) * 100 : 0;
+        const completedCount = items.filter((item) => Number(item.percent) >= 99.5).length;
+        const criticalCount = items.filter((item) => Number(item.percent) < 50 || (item.weeklyPlanned > 0 && item.weeklyActual < item.weeklyPlanned * 0.6)).length;
+        const statusTone = criticalCount > 0 ? 'critical' : weightedPercent >= 90 ? 'complete' : weightedPercent >= 70 ? 'healthy' : 'watch';
+        return { cat, items, totalScope, actualScope, weightedPercent, completedCount, criticalCount, statusTone };
+      });
+
+      const keyQuantitySummary = {
+        totalItems: keyQuantities.length,
+        totalScope: keyQuantities.reduce((sum, item) => sum + item.total, 0),
+        totalActual: keyQuantities.reduce((sum, item) => sum + item.actual, 0),
+        completedItems: keyQuantities.filter((item) => Number(item.percent) >= 99.5).length,
+        criticalItems: keyQuantities.filter((item) => Number(item.percent) < 50 || (item.weeklyPlanned > 0 && item.weeklyActual < item.weeklyPlanned * 0.6)).length,
+        activeWeeklyItems: keyQuantities.filter((item) => item.weeklyPlanned > 0 || item.weeklyActual > 0).length,
+      };
+      keyQuantitySummary.weightedProgress = keyQuantitySummary.totalScope ? (keyQuantitySummary.totalActual / keyQuantitySummary.totalScope) * 100 : 0;
+      keyQuantitySummary.watchItems = keyQuantitySummary.totalItems - keyQuantitySummary.completedItems - keyQuantitySummary.criticalItems;
+      const keyQuantityPriorityItems = [...keyQuantities]
+        .sort((a, b) => {
+          const aRisk = (Number(a.percent) < 50 ? 2 : 0) + (a.weeklyPlanned > 0 && a.weeklyActual < a.weeklyPlanned ? 1 : 0);
+          const bRisk = (Number(b.percent) < 50 ? 2 : 0) + (b.weeklyPlanned > 0 && b.weeklyActual < b.weeklyPlanned ? 1 : 0);
+          return bRisk - aRisk || Number(a.percent) - Number(b.percent);
+        })
+        .slice(0, 4);
 
       return (
         <div className="font-sans">
@@ -6575,22 +6622,16 @@
               <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200/60">
                 {/* Table Header */}
                 <div className="px-3 md:px-5 py-3 md:py-4" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1a1a2e 100%)' }}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center"><i data-lucide="file-text" style={{ width: 18, height: 18 }} className="text-white" /></div>
-                    <h3 className="text-sm md:text-lg font-black text-white tracking-wide leading-tight">Interim Payment Certificate Log</h3>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0"><i data-lucide="file-text" style={{ width: 18, height: 18 }} className="text-white" /></div>
+                      <h3 className="text-sm md:text-lg font-black text-white tracking-wide leading-tight">Interim Payment Certificate Log</h3>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <span className="text-[10px] bg-emerald-500/15 text-emerald-300 font-bold px-2.5 py-1 rounded-lg border border-emerald-500/20 flex items-center gap-1 whitespace-nowrap"><i data-lucide="check-circle" style={{ width: 10, height: 10 }} /> 21 Paid</span>
+                      <span className="text-[10px] bg-amber-500/15 text-amber-300 font-bold px-2.5 py-1 rounded-lg border border-amber-500/20 flex items-center gap-1 whitespace-nowrap"><i data-lucide="clock" style={{ width: 10, height: 10 }} /> 1 Pending</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 flex-wrap pl-0 md:pl-12">
-                    <span className="text-[10px] bg-emerald-500/15 text-emerald-300 font-bold px-2.5 py-1 rounded-lg border border-emerald-500/20 flex items-center gap-1"><i data-lucide="check-circle" style={{ width: 10, height: 10 }} /> 21 Paid</span>
-                    <span className="text-[10px] bg-amber-500/15 text-amber-300 font-bold px-2.5 py-1 rounded-lg border border-amber-500/20 flex items-center gap-1"><i data-lucide="clock" style={{ width: 10, height: 10 }} /> 1 Pending</span>
-                  </div>
-                </div>
-
-                <div className="px-3 md:px-5 py-2 bg-slate-900/95 border-t border-white/10 text-[8px] md:text-[9px] text-slate-300 flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 leading-tight">
-                  <span>Gross Total: SAR {ipcTotals.gross.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-                  <span>Net Total (VAT Inc.): SAR {ipcTotals.net.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-                  <span>Summary view focused on payment tracking</span>
-                  <span>Net Amount values are VAT inclusive</span>
-                  <span>Gross Invoice values are VAT exclusive</span>
                 </div>
 
                 <div className="overflow-x-auto bg-white border-t border-slate-200 break-inside-avoid print:text-[10px] -mx-1 px-1 md:mx-0 md:px-0">
@@ -6652,92 +6693,139 @@
               <button onClick={scrollToTop} className="no-print flex items-center gap-1 text-xs text-slate-600 hover:text-blue-600 transition-colors"><i data-lucide="arrow-up" style={{ width: 14, height: 14 }} /> Back to Cover</button>
             </div>
 
-            <div className="columns-1 md:columns-2 xl:columns-3 gap-6 mb-12 space-y-6">
-              {Object.entries(
-                keyQuantities.reduce((acc, item) => {
-                  if (!acc[item.category]) acc[item.category] = [];
-                  acc[item.category].push(item);
-                  return acc;
-                }, {})
-              ).map(([cat, items]) => {
-                const catConfig = {
-                  'Earthworks': { icon: <i data-lucide="layers" style={{ width: 18, height: 18 }} />, header: 'bg-stone-50 border-stone-200 text-stone-900', iconBg: 'bg-white text-stone-600', badge: 'bg-stone-200/60 text-stone-800' },
-                  'Civ: Tanks': { icon: <i data-lucide="box" style={{ width: 18, height: 18 }} />, header: 'bg-orange-50 border-orange-200 text-orange-900', iconBg: 'bg-white text-orange-600', badge: 'bg-orange-200/60 text-orange-800' },
-                  'Civ: Bldgs': { icon: <i data-lucide="building" style={{ width: 18, height: 18 }} />, header: 'bg-yellow-50 border-yellow-200 text-yellow-900', iconBg: 'bg-white text-yellow-600', badge: 'bg-yellow-200/60 text-yellow-800' },
-                  'Mech: Tanks': { icon: <i data-lucide="wrench" style={{ width: 18, height: 18 }} />, header: 'bg-sky-50 border-sky-200 text-sky-900', iconBg: 'bg-white text-sky-600', badge: 'bg-sky-200/60 text-sky-800' },
-                  'Piping': { icon: <i data-lucide="activity" style={{ width: 18, height: 18 }} />, header: 'bg-indigo-50 border-indigo-200 text-indigo-900', iconBg: 'bg-white text-indigo-600', badge: 'bg-indigo-200/60 text-indigo-800' },
-                }[cat] || { icon: <i data-lucide="list" style={{ width: 18, height: 18 }} />, header: 'bg-slate-50 border-slate-200 text-slate-900', iconBg: 'bg-white text-slate-600', badge: 'bg-slate-200/60 text-slate-800' };
+            <div className="mb-12 space-y-6">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+                {keyQuantityCategories.map(({ cat, items, totalScope, actualScope, weightedPercent, completedCount, criticalCount, statusTone }) => {
+                  const catConfig = {
+                    'Earthworks': { icon: <i data-lucide="layers" style={{ width: 18, height: 18 }} />, header: 'from-stone-50 to-white border-stone-200 text-stone-900', iconBg: 'bg-white text-stone-600 border-stone-200', badge: 'bg-stone-100 text-stone-700 border-stone-200', accent: '#78716c' },
+                    'Civ: Buildings': { icon: <i data-lucide="building" style={{ width: 18, height: 18 }} />, header: 'from-yellow-50 to-white border-yellow-200 text-yellow-900', iconBg: 'bg-white text-yellow-600 border-yellow-200', badge: 'bg-yellow-100 text-yellow-700 border-yellow-200', accent: '#eab308' },
+                    'Civ: Shafts': { icon: <i data-lucide="tower-control" style={{ width: 18, height: 18 }} />, header: 'from-amber-50 to-white border-amber-200 text-amber-900', iconBg: 'bg-white text-amber-600 border-amber-200', badge: 'bg-amber-100 text-amber-700 border-amber-200', accent: '#f59e0b' },
+                    'Civ: UG Items': { icon: <i data-lucide="square-stack" style={{ width: 18, height: 18 }} />, header: 'from-lime-50 to-white border-lime-200 text-lime-900', iconBg: 'bg-white text-lime-600 border-lime-200', badge: 'bg-lime-100 text-lime-700 border-lime-200', accent: '#84cc16' },
+                    'Civ: Drainage': { icon: <i data-lucide="waves" style={{ width: 18, height: 18 }} />, header: 'from-cyan-50 to-white border-cyan-200 text-cyan-900', iconBg: 'bg-white text-cyan-600 border-cyan-200', badge: 'bg-cyan-100 text-cyan-700 border-cyan-200', accent: '#06b6d4' },
+                    'Mech: Tanks': { icon: <i data-lucide="wrench" style={{ width: 18, height: 18 }} />, header: 'from-sky-50 to-white border-sky-200 text-sky-900', iconBg: 'bg-white text-sky-600 border-sky-200', badge: 'bg-sky-100 text-sky-700 border-sky-200', accent: '#0ea5e9' },
+                    'Piping': { icon: <i data-lucide="activity" style={{ width: 18, height: 18 }} />, header: 'from-indigo-50 to-white border-indigo-200 text-indigo-900', iconBg: 'bg-white text-indigo-600 border-indigo-200', badge: 'bg-indigo-100 text-indigo-700 border-indigo-200', accent: '#4f46e5' },
+                  }[cat] || { icon: <i data-lucide="list" style={{ width: 18, height: 18 }} />, header: 'from-slate-50 to-white border-slate-200 text-slate-900', iconBg: 'bg-white text-slate-600 border-slate-200', badge: 'bg-slate-100 text-slate-700 border-slate-200', accent: '#64748b' };
+                  const toneChip = statusTone === 'critical'
+                    ? 'bg-amber-50 text-amber-700 border-amber-200'
+                    : statusTone === 'complete'
+                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                      : statusTone === 'healthy'
+                        ? 'bg-sky-50 text-sky-700 border-sky-200'
+                        : 'bg-slate-100 text-slate-700 border-slate-200';
+                  const toneLabel = statusTone === 'critical'
+                    ? 'Delay Risk'
+                    : statusTone === 'complete'
+                      ? 'Done'
+                      : statusTone === 'healthy'
+                        ? 'Good'
+                        : 'Watch';
 
-                return (
-                  <div key={cat} className="inline-block w-full bg-white rounded-xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] border border-slate-200 overflow-hidden break-inside-avoid flex flex-col hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
-                    <div className={`${catConfig.header} px-4 py-3 border-b flex items-center justify-between`}>
-                      <h3 className="font-bold flex items-center gap-2.5 text-sm">
-                        <div className={`p-1.5 rounded-lg shadow-sm border border-white/50 ${catConfig.iconBg}`}>
-                          {catConfig.icon}
-                        </div>
-                        {cat}
-                      </h3>
-                      <span className={`text-[9px] font-black uppercase tracking-wider px-2 py-1 rounded-md ${catConfig.badge}`}>
-                        {items.length} Items
-                      </span>
-                    </div>
-
-                    <div className="flex-1 p-0 bg-slate-50/30">
-                      <div className="divide-y divide-slate-100">
-                        {items.map((item, i) => (
-                          <div key={i} className="p-3.5 hover:bg-white transition-colors group relative">
-                            <div className="flex justify-between items-start mb-2">
-                              <div className="pr-2">
-                                <div className="font-bold text-slate-800 text-[13px] leading-tight group-hover:text-blue-700 transition-colors uppercase tracking-wide">
-                                  {item.item}
-                                </div>
-                                <div className="text-[12px] text-slate-500 mt-1 flex items-center gap-1 font-mono">
-                                  <span className="font-bold text-slate-700">{item.actual.toLocaleString()}</span>
-                                  <span className="text-slate-300">/</span>
-                                  {item.total.toLocaleString()}
-                                  <span className="text-[11px] ml-1 text-slate-400">{item.unit}</span>
-                                </div>
-                              </div>
-                              <div className="text-right flex-shrink-0">
-                                <div className="text-base font-black" style={{ color: item.barColor }}>
-                                  {item.percent}%
-                                </div>
-                              </div>
+                  return (
+                    <div key={cat} className="bg-white rounded-[22px] shadow-sm border border-slate-200 overflow-hidden break-inside-avoid">
+                      <div className={`px-3.5 md:px-4 py-3 border-b bg-gradient-to-r ${catConfig.header}`}>
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="min-w-0 flex items-center gap-2.5">
+                            <div className={`h-9 w-9 rounded-xl border flex items-center justify-center shrink-0 ${catConfig.iconBg}`}>
+                              {catConfig.icon}
                             </div>
-
-                            <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden mb-2.5">
-                              <div className="h-full rounded-full transition-all duration-700" style={{ width: `${item.percent}%`, backgroundColor: item.barColor }}></div>
-                            </div>
-
-                            <div className="flex justify-between items-center bg-slate-50/80 rounded border border-slate-100 px-2 py-1.5">
-                              {item.weeklyPlanned > 0 || item.weeklyActual > 0 ? (
-                                <>
-                                  <div className="text-[11px] font-bold text-slate-500 uppercase">Weekly Status</div>
-                                  <div className="flex items-center gap-2">
-                                    <div className="flex flex-col items-end">
-                                      <div className="flex items-center gap-1 font-mono text-[11px] leading-none">
-                                        <span className={item.weeklyActual >= item.weeklyPlanned ? 'text-emerald-600 font-bold' : 'text-rose-600 font-bold'}>{item.weeklyActual.toLocaleString()}</span>
-                                        <span className="text-slate-300 text-[10px]">vs</span>
-                                        <span className="text-slate-500">{item.weeklyPlanned.toLocaleString()}</span>
-                                      </div>
-                                    </div>
-                                    <div className="w-10 h-1 bg-slate-200 rounded-full overflow-hidden flex">
-                                      <div className="h-full bg-slate-400" style={{ width: '50%' }}></div>
-                                      <div className={`h-full ${item.weeklyActual >= item.weeklyPlanned ? 'bg-emerald-500' : 'bg-rose-500'}`} style={{ width: `${Math.min((item.weeklyActual / (item.weeklyPlanned || 1)) * 50, 100)}%` }}></div>
-                                    </div>
-                                  </div>
-                                </>
-                              ) : (
-                                <div className="w-full text-center text-[11px] text-slate-400 font-medium italic">No weekly targets activities</div>
-                              )}
+                            <div className="min-w-0">
+                              <h3 className="font-bold text-sm md:text-base leading-tight truncate">{cat}</h3>
+                              <div className="text-[10px] text-slate-500 mt-0.5">{items.length} items • {weightedPercent.toFixed(1)}% progress</div>
                             </div>
                           </div>
-                        ))}
+                          <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] ${toneChip}`}>
+                            {toneLabel}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="bg-white">
+                        <div className="hidden md:grid grid-cols-[minmax(0,1.2fr)_minmax(0,1.8fr)_80px] gap-3 px-3.5 md:px-4 py-2 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400 border-b border-slate-100 bg-slate-50/80">
+                          <div>Item</div>
+                          <div>Total / Done / Remaining / Weekly</div>
+                          <div className="text-right">Status</div>
+                        </div>
+                        <div className="divide-y divide-slate-100">
+                          {items.map((item, i) => {
+                            const itemPercent = Number(item.percent);
+                            const weeklyTracked = item.weeklyPlanned > 0 || item.weeklyActual > 0;
+                            const weeklyOnTrack = item.weeklyPlanned === 0 || item.weeklyActual >= item.weeklyPlanned;
+                            const itemTone = itemPercent >= 99.5 ? 'complete' : itemPercent < 50 ? 'critical' : itemPercent >= 80 ? 'healthy' : 'watch';
+                            const itemChip = itemTone === 'complete'
+                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                              : itemTone === 'critical'
+                                ? 'bg-rose-50 text-rose-700 border-rose-200'
+                                : itemTone === 'healthy'
+                                  ? 'bg-sky-50 text-sky-700 border-sky-200'
+                                  : 'bg-amber-50 text-amber-700 border-amber-200';
+                            return (
+                              <div key={i} className="px-3.5 md:px-4 py-3 hover:bg-slate-50/70 transition-colors">
+                                <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1.8fr)_80px] gap-3 items-start md:items-center">
+                                  <div className="min-w-0">
+                                    <div className="flex items-start justify-between gap-3 md:block">
+                                      <div className="min-w-0">
+                                        <div className="text-[13px] md:text-sm font-semibold text-slate-900 leading-tight">{item.item}</div>
+                                        <div className="text-[10px] md:text-[11px] text-slate-900 mt-1">Completion status <span className="font-bold tabular-nums" style={{ color: item.barColor }}>{itemPercent.toFixed(0)}%</span></div>
+                                      </div>
+                                      <div className="md:hidden text-right shrink-0">
+                                        <span className={`inline-flex rounded-full border px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.12em] ${itemChip}`}>
+                                          {itemTone === 'complete' ? 'Done' : itemTone === 'critical' ? 'Delay' : itemTone === 'healthy' ? 'Good' : 'Watch'}
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div className="mt-2 flex items-center gap-2 md:max-w-[240px]">
+                                      <div className="flex-1 h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                        <div className="h-full rounded-full transition-all duration-700" style={{ width: `${Math.max(0, Math.min(itemPercent, 100))}%`, background: `linear-gradient(90deg, ${item.barColor}cc, ${item.barColor})` }}></div>
+                                      </div>
+                                      <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-900">{item.unit}</span>
+                                    </div>
+                                  </div>
+
+                                  <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 px-3 py-3">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-3 md:items-start">
+                                      <div className="min-w-0 md:min-w-[88px]">
+                                        <div className="text-[9px] font-bold uppercase tracking-[0.08em] text-slate-900 leading-tight">Total</div>
+                                        <div className="mt-1 text-[16px] md:text-[17px] font-black text-slate-900 tabular-nums leading-tight break-words">{formatKeyQtyValue(item.total, item.category)}</div>
+                                        <div className="mt-1 text-[10px] text-slate-900 leading-tight">{item.unit}</div>
+                                      </div>
+                                      <div className="min-w-0 md:min-w-[88px]">
+                                        <div className="text-[9px] font-bold uppercase tracking-[0.08em] text-emerald-600 leading-tight">Done</div>
+                                        <div className="mt-1 text-[16px] md:text-[17px] font-black text-emerald-700 tabular-nums leading-tight break-words">{formatKeyQtyValue(item.actual, item.category)}</div>
+                                        <div className="mt-1 text-[10px] text-slate-900 leading-tight">Executed</div>
+                                      </div>
+                                      <div className="min-w-0 md:min-w-[88px]">
+                                        <div className="text-[9px] font-bold uppercase tracking-[0.08em] text-amber-600 leading-tight">Remaining</div>
+                                        <div className="mt-1 text-[16px] md:text-[17px] font-black text-amber-700 tabular-nums leading-tight break-words">{formatKeyQtyValue(item.remaining, item.category)}</div>
+                                        <div className="mt-1 text-[10px] text-slate-900 leading-tight">Balance</div>
+                                      </div>
+                                      <div className="min-w-0 md:min-w-[88px]">
+                                        <div className="text-[9px] font-bold uppercase tracking-[0.08em] text-slate-900 leading-tight">Weekly Plan</div>
+                                        <div className="mt-1 text-[16px] md:text-[17px] font-black text-slate-900 tabular-nums leading-tight break-words">{formatKeyQtyValue(item.weeklyPlanned, item.category)}</div>
+                                        <div className="mt-1 text-[10px] text-slate-900 leading-tight">Planned</div>
+                                      </div>
+                                      <div className="min-w-0 md:min-w-[88px]">
+                                        <div className={`text-[9px] font-bold uppercase tracking-[0.08em] leading-tight ${weeklyTracked ? (weeklyOnTrack ? 'text-emerald-900' : 'text-amber-900') : 'text-slate-900'}`}>Weekly Actual</div>
+                                        <div className={`mt-1 text-[16px] md:text-[17px] font-black tabular-nums leading-tight break-words ${weeklyTracked ? (weeklyOnTrack ? 'text-emerald-700' : 'text-amber-700') : 'text-slate-900'}`}>{formatKeyQtyValue(item.weeklyActual, item.category)}</div>
+                                        <div className={`mt-1 text-[10px] leading-tight ${weeklyTracked ? (weeklyOnTrack ? 'text-emerald-900' : 'text-amber-900') : 'text-slate-900'}`}>{weeklyTracked ? (weeklyOnTrack ? 'On plan' : 'Behind plan') : 'No weekly plan'}</div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="hidden md:block md:text-right">
+                                    <span className={`inline-flex rounded-full border px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.12em] ${itemChip}`}>
+                                      {itemTone === 'complete' ? 'Done' : itemTone === 'critical' ? 'Delay' : itemTone === 'healthy' ? 'Good' : 'Watch'}
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
 
             {/* 6. CIVIL */}
