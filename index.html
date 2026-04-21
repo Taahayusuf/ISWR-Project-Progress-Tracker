@@ -355,12 +355,12 @@
     },
     {
         "activity": "Pipe Welding (wdi)",
-        "total": 41000,
-        "prev": 24548,
-        "curr": 25772,
-        "lastPct": 59.87,
-        "currPct": 62.86,
-        "rem": 15228
+        "total": 33384,
+        "prev": 32136,
+        "curr": 32360,
+        "lastPct": 96.26,
+        "currPct": 96.93,
+        "rem": 1024
     },
     {
         "activity": "Welding (Joints)",
@@ -657,32 +657,32 @@
 
     const kpiData = {
     "total": {
-        "actual": 63074,
-        "target": 207440,
+        "actual": 93203,
+        "target": 249904,
         "label": "TOTAL PROGRESS",
-        "actualMt": 12001,
-        "targetMt": 20989
+        "actualMt": 13324,
+        "targetMt": 20993
     },
     "station": {
-        "actual": 22724,
-        "target": 62054,
+        "actual": 43353,
+        "target": 109882,
         "label": "STATION PIPING",
         "actualMt": 3542,
         "targetMt": 8605
     },
     "tank": {
-        "actual": 14578,
-        "target": 104386,
+        "actual": 17232,
+        "target": 104530,
         "label": "TANK PIPING",
         "actualMt": 2467,
         "targetMt": 4989
     },
     "pipe": {
-        "actual": 25772,
-        "target": 41000,
+        "actual": 32504,
+        "target": 33864,
         "label": "PIPELINE",
-        "actualMt": 5992,
-        "targetMt": 7395
+        "actualMt": 7315,
+        "targetMt": 7399
     }
 };
     const pipingConsistency = {
@@ -1142,12 +1142,12 @@
         "monthlyActualWdi": 63074,
         "stationActualWdi": 22724,
         "tankActualWdi": 14578,
-        "pipeActualWdi": 25772,
-        "totalActualWdi": 63074,
+        "pipeActualWdi": 32360,
+        "totalActualWdi": 69662,
         "stationTargetWdi": 62054,
         "tankTargetWdi": 104386,
-        "pipeTargetWdi": 41000,
-        "totalTargetWdi": 207440
+        "pipeTargetWdi": 33384,
+        "totalTargetWdi": 199824
     }
 };
     const tankBottomSummary = {
@@ -1179,19 +1179,19 @@
     }
 };
     const financialDerived = {
-    "paidPct": 78.87,
-    "certifiedPct": 81.19,
-    "outstandingPct": 2.31,
-    "remainingPct": 18.81,
-    "paidInvoices": 21,
-    "outstandingInvoices": 1,
-    "pendingApprovalInvoices": 1,
-    "certifiedInvoices": 22
+    "paidPct": 81.19,
+    "certifiedPct": 84.82,
+    "outstandingPct": 3.64,
+    "remainingPct": 15.18,
+    "paidInvoices": 22,
+    "outstandingInvoices": 2,
+    "pendingApprovalInvoices": 0,
+    "certifiedInvoices": 24
 };
     const personnelSummary = {
-    "total": 1447,
+    "total": 1448,
     "turkish": 282,
-    "tcn": 1165,
+    "tcn": 1166,
     "empty": 97
 };
     const campBlockData = [
@@ -2129,11 +2129,11 @@
 
     const financialSummary = {
     "contractValue": 1307551012.21,
-    "netPaid": 1031329964.07,
-    "netCertified": 1061559075.92,
-    "outstanding": 30229111.85,
-    "grossInvoice": 1081683668.44,
-    "pendingApproval": 25206607.73
+    "netPaid": 1061559075.92,
+    "netCertified": 1109115826.53,
+    "outstanding": 47556750.61,
+    "grossInvoice": 1104548264.73,
+    "pendingApproval": 0
 };
     const ipcLog = [
     {
@@ -2507,16 +2507,16 @@
         "releaseRetention": 1546246.13,
         "vat": 3942927.63,
         "net": 30229111.85,
-        "status": "PPC Approved, Awaiting Payment",
+        "status": "Paid",
         "dueDate": "02-Apr-26",
-        "payDate": "-"
+        "payDate": "31-Mar-26"
     },
     {
         "pc": "PC: 23",
         "from": "01-Feb-26",
-        "to": "31-Jan-26",
-        "applicationDate": "-",
-        "invoiceDate": "-",
+        "to": "28-Feb-26",
+        "applicationDate": "18-Mar-26",
+        "invoiceDate": "31-Mar-26",
         "letterNo": "SA015-MAP-GEN-PPC-023",
         "gross": 25786810.98,
         "advanceRecovery": 3868021.65,
@@ -2524,36 +2524,53 @@
         "releaseRetention": 1289340.55,
         "vat": 3287818.4,
         "net": 25206607.73,
-        "status": "PPC Submitted, Awaiting Approval",
+        "status": "PPC Approved, Awaiting Payment",
+        "dueDate": "30-Apr-26",
+        "payDate": "-"
+    },
+    {
+        "pc": "PC: 24",
+        "from": "01-Mar-26",
+        "to": "31-Mar-26",
+        "applicationDate": "-",
+        "invoiceDate": "-",
+        "letterNo": "SA015-MAP-GEN-PPC-024",
+        "gross": 22864596.29,
+        "advanceRecovery": 3429689.44,
+        "retention": 1143229.81,
+        "releaseRetention": 1143229.81,
+        "vat": 2915236.03,
+        "net": 22350142.88,
+        "status": "PPC will be submitted ",
         "dueDate": "-",
         "payDate": "-"
     }
 ];
     const ipcTotals = {
-    "gross": 1081683668.44,
-    "advanceRecovery": 132802008.82,
-    "retention": 44267336.28,
-    "releaseRetention": 44267336.28,
-    "vat": 138464227.3,
-    "net": 1061559075.92
+    "gross": 1104548264.73,
+    "advanceRecovery": 136670030.47,
+    "retention": 45556676.83,
+    "releaseRetention": 45556676.83,
+    "vat": 141752045.7,
+    "net": 1109115826.53
 };
 
     const overallProgress = {
-    "planned": 76.46,
-    "actual": 77.37,
-    "variance": 0.91,
+    "planned": 80.03,
+    "actual": 80.8,
+    "variance": 0.76,
     "spi": 1.01
 };
     const physicalProgressData = [
     {
         "item": "Overall",
         "weight": 100,
-        "wkPlanned": 0.85,
-        "wkActual": 0.62,
-        "baseline": 80.9,
-        "cumPlanned": 76.46,
-        "cumActual": 77.37,
-        "variance": 0.91,
+        "wkPlanned": 0.96,
+        "wkActual": 0.85,
+        "baseline": 83.59,
+        "cumPlanned": 80.03,
+        "cumActual": 80.8,
+        "variance": 0.76,
         "float": "-"
     },
     {
@@ -2570,71 +2587,71 @@
     {
         "item": "Procurement",
         "weight": 30,
-        "wkPlanned": 0.46,
-        "wkActual": 0.45,
-        "baseline": 94.7,
-        "cumPlanned": 90.73,
-        "cumActual": 91.73,
-        "variance": 1,
-        "float": "6"
+        "wkPlanned": 0.63,
+        "wkActual": 0.44,
+        "baseline": 96.3,
+        "cumPlanned": 93.02,
+        "cumActual": 93.34,
+        "variance": 0.31,
+        "float": "1"
     },
     {
         "item": "Construction",
         "weight": 62.86,
-        "wkPlanned": 1.14,
-        "wkActual": 0.77,
-        "baseline": 73.29,
-        "cumPlanned": 68.88,
-        "cumActual": 69.82,
-        "variance": 0.94,
+        "wkPlanned": 1.22,
+        "wkActual": 1.12,
+        "baseline": 76.92,
+        "cumPlanned": 73.46,
+        "cumActual": 74.5,
+        "variance": 1.05,
         "float": "-"
     },
     {
         "item": "Earthworks",
         "isSub": true,
         "weight": 22.84,
-        "wkPlanned": 0.18,
-        "wkActual": 0.19,
-        "baseline": 99.67,
-        "cumPlanned": 96.02,
-        "cumActual": 97.35,
-        "variance": 1.33,
-        "float": "55"
+        "wkPlanned": 0.23,
+        "wkActual": 0.16,
+        "baseline": 99.82,
+        "cumPlanned": 97,
+        "cumActual": 98.38,
+        "variance": 1.38,
+        "float": "45"
     },
     {
         "item": "Civil Works",
         "isSub": true,
         "weight": 16.57,
-        "wkPlanned": 0.38,
-        "wkActual": 0.32,
-        "baseline": 85.43,
-        "cumPlanned": 80.09,
-        "cumActual": 82.65,
-        "variance": 2.56,
+        "wkPlanned": 0.5,
+        "wkActual": 0.76,
+        "baseline": 88.68,
+        "cumPlanned": 81.82,
+        "cumActual": 84.19,
+        "variance": 2.37,
         "float": "18"
     },
     {
         "item": "Mechanical Works",
         "isSub": true,
         "weight": 49.98,
-        "wkPlanned": 2.01,
-        "wkActual": 1.14,
-        "baseline": 71.9,
-        "cumPlanned": 60.04,
-        "cumActual": 60.11,
-        "variance": 0.07,
+        "wkPlanned": 2.09,
+        "wkActual": 1.76,
+        "baseline": 76.22,
+        "cumPlanned": 67.96,
+        "cumActual": 68.06,
+        "variance": 0.1,
         "float": "48"
     },
     {
         "item": "E&I Works",
         "isSub": true,
         "weight": 7.43,
-        "wkPlanned": 0.44,
-        "wkActual": 1.45,
-        "baseline": 13.32,
-        "cumPlanned": 6.6,
-        "cumActual": 9.03,
-        "variance": 2.42,
+        "wkPlanned": 0.48,
+        "wkActual": 1.08,
+        "baseline": 18.8,
+        "cumPlanned": 8.05,
+        "cumActual": 11.95,
+        "variance": 3.89,
         "float": "-"
     },
     {
@@ -2651,12 +2668,12 @@
     {
         "item": "Test and Commissioning",
         "weight": 1.24,
-        "wkPlanned": 0,
-        "wkActual": 0,
+        "wkPlanned": 0.37,
+        "wkActual": 0.4,
         "baseline": null,
-        "cumPlanned": 3.23,
-        "cumActual": 4.65,
-        "variance": 1.43,
+        "cumPlanned": 3.98,
+        "cumActual": 5.06,
+        "variance": 1.07,
         "float": "-"
     }
 ];
@@ -2669,14 +2686,14 @@
     },
     {
         "name": "Procurement",
-        "planned": 90.73,
-        "actual": 91.73,
-        "spi": 1.01
+        "planned": 93.02,
+        "actual": 93.34,
+        "spi": 1
     },
     {
         "name": "Construction",
-        "planned": 68.88,
-        "actual": 69.82,
+        "planned": 73.46,
+        "actual": 74.5,
         "spi": 1.01
     }
 ];
@@ -2684,19 +2701,19 @@
     const constructionSubProgress = [
     {
         "name": "Earthworks",
-        "variance": 1.33
+        "variance": 1.38
     },
     {
         "name": "Civil Works",
-        "variance": 2.56
+        "variance": 2.37
     },
     {
         "name": "Mechanical Works",
-        "variance": 0.07
+        "variance": 0.1
     },
     {
         "name": "E&I Works",
-        "variance": 2.42
+        "variance": 3.89
     }
 ];
 
@@ -4114,7 +4131,7 @@
 
     const civilSummary = {
     "totalConcrete": 25019,
-    "completed": 16039
+    "completed": 16378
 };
 
     const unitManhourData = [
@@ -4149,11 +4166,11 @@
         "item": "Excavation / ISWR",
         "unit": "m³",
         "total": 2140104,
-        "actual": 2099582,
-        "remaining": 40522,
-        "percent": "98.11",
-        "weeklyPlanned": 5154,
-        "weeklyActual": 4646,
+        "actual": 2118709,
+        "remaining": 21395,
+        "percent": "99.00",
+        "weeklyPlanned": 4761,
+        "weeklyActual": 2000,
         "category": "Earthworks",
         "color": "bg-stone-100 text-stone-900",
         "barColor": "#78716c"
@@ -4162,11 +4179,11 @@
         "item": "Backfilling / ISWR",
         "unit": "m³",
         "total": 1957813,
-        "actual": 1893096,
-        "remaining": 64717,
-        "percent": "96.69",
-        "weeklyPlanned": 2490,
-        "weeklyActual": 5451,
+        "actual": 1909303,
+        "remaining": 48510,
+        "percent": "97.52",
+        "weeklyPlanned": 4853,
+        "weeklyActual": 2000,
         "category": "Earthworks",
         "color": "bg-stone-100 text-stone-900",
         "barColor": "#78716c"
@@ -4178,7 +4195,7 @@
         "actual": 1249,
         "remaining": 6,
         "percent": "99.52",
-        "weeklyPlanned": 4,
+        "weeklyPlanned": 3,
         "weeklyActual": 0,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
@@ -4201,11 +4218,11 @@
         "item": "Buildings - Reinforced Concrete",
         "unit": "m³",
         "total": 5878,
-        "actual": 5238,
-        "remaining": 640,
-        "percent": "89.11",
-        "weeklyPlanned": 0,
-        "weeklyActual": 0,
+        "actual": 5258,
+        "remaining": 620,
+        "percent": "89.45",
+        "weeklyPlanned": 4,
+        "weeklyActual": 6,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
         "barColor": "#eab308"
@@ -4214,11 +4231,11 @@
         "item": "Buildings - Rebar",
         "unit": "ton",
         "total": 1090,
-        "actual": 1024,
-        "remaining": 66,
-        "percent": "93.94",
-        "weeklyPlanned": 0,
-        "weeklyActual": 0,
+        "actual": 1040,
+        "remaining": 50,
+        "percent": "95.41",
+        "weeklyPlanned": 3,
+        "weeklyActual": 8,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
         "barColor": "#eab308"
@@ -4230,7 +4247,7 @@
         "actual": 139,
         "remaining": 50,
         "percent": "73.54",
-        "weeklyPlanned": 1,
+        "weeklyPlanned": 0,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
@@ -4256,7 +4273,7 @@
         "actual": 1344,
         "remaining": 398,
         "percent": "77.15",
-        "weeklyPlanned": 0,
+        "weeklyPlanned": 4,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
@@ -4266,10 +4283,10 @@
         "item": "Shafts - Rebar",
         "unit": "ton",
         "total": 433,
-        "actual": 302,
-        "remaining": 131,
-        "percent": "69.75",
-        "weeklyPlanned": 1,
+        "actual": 303,
+        "remaining": 130,
+        "percent": "69.98",
+        "weeklyPlanned": 7,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
@@ -4279,11 +4296,11 @@
         "item": "UG Items - Reinforced Concrete",
         "unit": "m³",
         "total": 5567,
-        "actual": 427,
-        "remaining": 5140,
-        "percent": "7.67",
-        "weeklyPlanned": 2,
-        "weeklyActual": 30,
+        "actual": 686,
+        "remaining": 4881,
+        "percent": "12.32",
+        "weeklyPlanned": 0,
+        "weeklyActual": 141,
         "category": "Civ: UG Items",
         "color": "bg-lime-100 text-lime-900",
         "barColor": "#84cc16"
@@ -4292,11 +4309,11 @@
         "item": "UG Items - Rebar",
         "unit": "ton",
         "total": 252,
-        "actual": 53,
-        "remaining": 199,
-        "percent": "21.03",
+        "actual": 105,
+        "remaining": 147,
+        "percent": "41.67",
         "weeklyPlanned": 0,
-        "weeklyActual": 1,
+        "weeklyActual": 36,
         "category": "Civ: UG Items",
         "color": "bg-lime-100 text-lime-900",
         "barColor": "#84cc16"
@@ -4305,11 +4322,11 @@
         "item": "Drainage - Lean Concrete",
         "unit": "m³",
         "total": 800,
-        "actual": 8,
-        "remaining": 792,
-        "percent": "1.00",
+        "actual": 16,
+        "remaining": 784,
+        "percent": "2.00",
         "weeklyPlanned": 0,
-        "weeklyActual": 1,
+        "weeklyActual": 0,
         "category": "Civ: Drainage",
         "color": "bg-cyan-100 text-cyan-900",
         "barColor": "#06b6d4"
@@ -4318,11 +4335,11 @@
         "item": "Drainage - Reinforced Concrete",
         "unit": "m³",
         "total": 2827,
-        "actual": 24,
-        "remaining": 2803,
-        "percent": "0.85",
+        "actual": 85,
+        "remaining": 2742,
+        "percent": "3.01",
         "weeklyPlanned": 0,
-        "weeklyActual": 18,
+        "weeklyActual": 0,
         "category": "Civ: Drainage",
         "color": "bg-cyan-100 text-cyan-900",
         "barColor": "#06b6d4"
@@ -4331,102 +4348,37 @@
         "item": "Drainage - Rebar",
         "unit": "ton",
         "total": 252,
-        "actual": 5,
-        "remaining": 247,
-        "percent": "1.98",
+        "actual": 13,
+        "remaining": 239,
+        "percent": "5.16",
         "weeklyPlanned": 0,
-        "weeklyActual": 4,
+        "weeklyActual": 0,
         "category": "Civ: Drainage",
         "color": "bg-cyan-100 text-cyan-900",
         "barColor": "#06b6d4"
     },
     {
-        "item": "Annular Plt. - Erection",
-        "unit": "ton",
-        "total": 1100,
-        "actual": 1096,
-        "remaining": 4,
-        "percent": "99.64",
-        "weeklyPlanned": 1,
-        "weeklyActual": 2,
-        "category": "Mech: Tanks",
-        "color": "bg-sky-100 text-sky-900",
-        "barColor": "#0ea5e9"
-    },
-    {
-        "item": "Annular Plt. - Welding",
-        "unit": "m",
-        "total": 5450,
-        "actual": 5388,
-        "remaining": 62,
-        "percent": "98.86",
-        "weeklyPlanned": 0,
-        "weeklyActual": 64,
-        "category": "Mech: Tanks",
-        "color": "bg-sky-100 text-sky-900",
-        "barColor": "#0ea5e9"
-    },
-    {
-        "item": "Bottom Plt. - Erection",
-        "unit": "ton",
-        "total": 6594,
-        "actual": 6428,
-        "remaining": 166,
-        "percent": "97.48",
-        "weeklyPlanned": 0,
-        "weeklyActual": 34,
-        "category": "Mech: Tanks",
-        "color": "bg-sky-100 text-sky-900",
-        "barColor": "#0ea5e9"
-    },
-    {
-        "item": "Roof - Erection",
-        "unit": "ton",
-        "total": 2194,
-        "actual": 28,
-        "remaining": 2166,
-        "percent": "1.28",
-        "weeklyPlanned": 0,
-        "weeklyActual": 0,
-        "category": "Mech: Tanks",
-        "color": "bg-sky-100 text-sky-900",
-        "barColor": "#0ea5e9"
-    },
-    {
         "item": "Accessories - Erection",
         "unit": "ton",
         "total": 2242,
-        "actual": 1242,
-        "remaining": 1000,
-        "percent": "55.40",
-        "weeklyPlanned": 10,
-        "weeklyActual": 30,
+        "actual": 1085,
+        "remaining": 1157,
+        "percent": "48.39",
+        "weeklyPlanned": 15,
+        "weeklyActual": 20,
         "category": "Mech: Tanks",
         "color": "bg-sky-100 text-sky-900",
         "barColor": "#0ea5e9"
-    },
-    {
-        "item": "Station Piping",
-        "unit": "wdi",
-        "total": 108746,
-        "actual": 28126,
-        "remaining": 80620,
-        "percent": "25.86",
-        "weeklyPlanned": 2398,
-        "weeklyActual": 5402,
-        "category": "Mech: Tanks",
-        "color": "bg-indigo-100 text-indigo-900",
-        "barColor": "#4f46e5"
     },
     {
         "item": "Pipeline (Welding)",
         "unit": "wdi",
-        "total": 38458,
-        "actual": 27200,
-        "remaining": 11258,
-        "percent": "70.73",
-        "weeklyPlanned": 2313,
-        "weeklyActual": 1428,
+        "total": 36528,
+        "actual": 31960,
+        "remaining": 4568,
+        "percent": "87.49",
+        "weeklyPlanned": 1524,
+        "weeklyActual": 612,
         "category": "Piping",
         "color": "bg-indigo-100 text-indigo-900",
         "barColor": "#4f46e5"
@@ -4435,11 +4387,11 @@
         "item": "Pipeline (Erection)",
         "unit": "m",
         "total": 7290,
-        "actual": 6073,
-        "remaining": 1217,
-        "percent": "83.31",
-        "weeklyPlanned": 30,
-        "weeklyActual": 177,
+        "actual": 7262,
+        "remaining": 28,
+        "percent": "99.62",
+        "weeklyPlanned": 366,
+        "weeklyActual": 139,
         "category": "Piping",
         "color": "bg-indigo-100 text-indigo-900",
         "barColor": "#4f46e5"
@@ -5831,7 +5783,7 @@
     },
     {
         "tank": "Buffer Tank-1",
-        "type": "Buffer",
+        "type": "Strategic",
         "total": 106,
         "completed": 0,
         "remain": 106,
@@ -5842,7 +5794,7 @@
     },
     {
         "tank": "Buffer Tank-2",
-        "type": "Buffer",
+        "type": "Strategic",
         "total": 106,
         "completed": 0,
         "remain": 106,
@@ -5853,7 +5805,7 @@
     },
     {
         "tank": "Tank-A",
-        "type": "Operational",
+        "type": "Strategic",
         "total": 9343,
         "completed": 9343,
         "remain": 0,
@@ -5864,7 +5816,7 @@
     },
     {
         "tank": "Tank-B",
-        "type": "Operational",
+        "type": "Strategic",
         "total": 9343,
         "completed": 8119,
         "remain": 1224,
@@ -5875,7 +5827,7 @@
     },
     {
         "tank": "Tank-C",
-        "type": "Operational",
+        "type": "Strategic",
         "total": 9343,
         "completed": 6892,
         "remain": 2451,
@@ -6149,9 +6101,9 @@
       return [...rows].reverse().find((row) => keyList.some((key) => Number(row[key]) > 0)) || { [fallbackPeriodKey]: '-' };
     };
 
-    const COVER_REPORT_DATE = '19 April 2026';
+    const COVER_REPORT_DATE = '18 April 2026';
     const COVER_REPORT_WEEK_LABEL = 'Week 16 of 2026';
-    const SHARED_REPORT_DATE_LABEL = '19 APRIL 2026';
+    const SHARED_REPORT_DATE_LABEL = '18 APRIL 2026';
 
     const PipingSection = () => {
       const mergedData = useMemo(() => (
@@ -6338,130 +6290,6 @@
             <div className="flex items-center gap-3"><div className="bg-slate-100 px-3 py-1 rounded print:bg-white print:border print:border-slate-300"><p className="text-[10px] font-bold text-slate-700 uppercase">Report Date</p><p className="text-sm font-bold text-slate-900">{reportDateLabel}</p></div></div>
           </div>
 
-          <div className="bg-slate-50 rounded-[28px] p-4 sm:p-5 text-slate-900 shadow-sm break-inside-avoid border-2 border-slate-700 overflow-hidden relative">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.14),transparent_35%)]"></div>
-            <div className="relative flex flex-col gap-4">
-              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-                <div className="min-w-0">
-                  <div className="text-[11px] uppercase tracking-[0.24em] text-slate-600 font-bold">Executive trajectory</div>
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight mt-2">Piping weekly delivery vs required pace</h3>
-                  <p className="text-sm text-slate-600 mt-2 max-w-3xl">The strip lets the trend line tell the story first, with only the balance and forecast badges left for quick reading.</p>
-                </div>
-                <div className={`w-fit rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] ${pipingExecutiveSummary.statusClasses}`}>
-                  {pipingExecutiveSummary.status}
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,2.4fr)_minmax(300px,1fr)] gap-4 items-stretch">
-                <div className="rounded-[24px] border-2 border-slate-500 bg-white p-3 sm:p-4 print:bg-white print:border-slate-400 print:text-slate-900">
-                  <div className="flex items-center justify-between gap-3 mb-3">
-                    <div>
-                      <div className="text-[10px] uppercase tracking-[0.16em] text-slate-400 print:text-slate-500 font-bold">Last 16 weeks</div>
-                      <div className="text-sm font-semibold text-slate-800 print:text-slate-900 mt-1">Weekly actual vs plan, with cumulative actual vs plan behind it</div>
-                    </div>
-                    <div className={`text-xs font-bold ${pipingExecutiveSummary.trendDelta >= 0 ? 'text-emerald-700 print:text-emerald-700' : 'text-rose-700 print:text-rose-700'}`}>
-                      {pipingExecutiveSummary.trendDelta >= 0 ? 'Trend improving' : 'Trend softening'}
-                    </div>
-                  </div>
-                  <div className="mb-3 flex flex-wrap gap-3 text-[11px] text-slate-600 print:text-slate-600">
-                    <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-sm bg-sky-400"></span>Weekly actual</span>
-                    <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-sm bg-slate-400"></span>Weekly plan</span>
-                    <span className="inline-flex items-center gap-2"><span className="h-0.5 w-4 bg-emerald-400"></span>Cumulative actual</span>
-                    <span className="inline-flex items-center gap-2"><span className="h-0.5 w-4 border-t-2 border-fuchsia-300 border-dashed"></span>Cumulative plan</span>
-                  </div>
-                  <div className="h-52 sm:h-56 print:h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <ComposedChart data={pipingExecutiveSummary.chartData} margin={{ top: 8, right: 18, left: 6, bottom: 18 }}>
-                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(148,163,184,0.18)" />
-                        <XAxis dataKey="period" stroke={executiveAxisStroke} tick={{ fontSize: 11, fontWeight: 700, fill: executiveAxisFill }} interval={0} angle={-35} textAnchor="end" height={52} />
-                        <YAxis yAxisId="left" stroke={executiveAxisStroke} tick={{ fontSize: 11, fill: executiveAxisFill }} width={54} />
-                        <YAxis yAxisId="right" orientation="right" stroke={executiveAxisStroke} tick={{ fontSize: 11, fill: executiveAxisFill }} width={54} />
-                        <Tooltip contentStyle={executiveTooltipStyle} formatter={(value, name) => [
-                          (Number(value) || 0).toLocaleString(),
-                          name === 'weeklyActual' ? 'Weekly Actual WDI' : name === 'weeklyPlan' ? 'Weekly Plan WDI' : name === 'cumulativeActual' ? 'Cum Actual WDI' : 'Cum Plan WDI'
-                        ]} labelStyle={{ fontWeight: 'bold', color: executiveLabelFill }} />
-                        <Bar yAxisId="left" dataKey="weeklyPlan" name="weeklyPlan" fill="#94a3b8" radius={[6, 6, 0, 0]} maxBarSize={18} />
-                        <Bar yAxisId="left" dataKey="weeklyActual" name="weeklyActual" fill="#38bdf8" radius={[6, 6, 0, 0]} maxBarSize={18}>
-                          <LabelList dataKey="weeklyActual" position="top" formatter={(value) => (Number(value) || 0).toLocaleString()} style={{ fill: executiveLabelFill, fontSize: 10, fontWeight: 700 }} />
-                        </Bar>
-                        <Line yAxisId="right" type="monotone" dataKey="cumulativeActual" name="cumulativeActual" stroke="#34d399" strokeWidth={2.5} dot={false} />
-                        <Line yAxisId="right" type="monotone" dataKey="cumulativePlan" name="cumulativePlan" stroke="#f9a8d4" strokeWidth={2.5} dot={false} strokeDasharray="5 5" />
-                      </ComposedChart>
-                    </ResponsiveContainer>
-                  </div>
-                  <div className="mt-3 hidden print:flex items-center justify-between text-[11px] text-slate-700">
-                    <span>Latest shown week: {pipingExecutiveSummary.latestChartPoint.period}</span>
-                    <span>Weekly actual {Number(pipingExecutiveSummary.latestChartPoint.weeklyActual || 0).toLocaleString()} · Weekly plan {Number(pipingExecutiveSummary.latestChartPoint.weeklyPlan || 0).toLocaleString()} · Cum actual {Number(pipingExecutiveSummary.latestChartPoint.cumulativeActual || 0).toLocaleString()}</span>
-                  </div>
-                  <div className="mt-3 hidden print:block overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
-                    <table className="w-full text-[10px] text-slate-800">
-                      <thead className="bg-slate-200/90">
-                        <tr>
-                          <th className="px-2 py-1.5 text-left font-bold border-b border-slate-300 text-slate-900">Week</th>
-                          <th className="px-2 py-1.5 text-right font-bold border-b border-slate-300 text-slate-900">Weekly Actual</th>
-                          <th className="px-2 py-1.5 text-right font-bold border-b border-slate-300 text-slate-900">Weekly Plan</th>
-                          <th className="px-2 py-1.5 text-right font-bold border-b border-slate-300 text-slate-900">Cum Actual</th>
-                          <th className="px-2 py-1.5 text-right font-bold border-b border-slate-300 text-slate-900">Cum Plan</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {pipingExecutiveSummary.chartData.map((row, idx) => (
-                          <tr key={row.period} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                            <td className="px-2 py-1 border-b border-slate-200">{row.period}</td>
-                            <td className="px-2 py-1 border-b border-slate-200 text-right tabular-nums">{Number(row.weeklyActual || 0).toLocaleString()}</td>
-                            <td className="px-2 py-1 border-b border-slate-200 text-right tabular-nums">{Number(row.weeklyPlan || 0).toLocaleString()}</td>
-                            <td className="px-2 py-1 border-b border-slate-200 text-right tabular-nums">{Number(row.cumulativeActual || 0).toLocaleString()}</td>
-                            <td className="px-2 py-1 border-b border-slate-200 text-right tabular-nums">{Number(row.cumulativePlan || 0).toLocaleString()}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="rounded-2xl border border-slate-400 bg-slate-100 px-3 py-2.5">
-                    <div className="text-[11px] uppercase tracking-[0.14em] text-slate-500 font-bold">Completion</div>
-                    <div className="mt-2 text-2xl font-black tabular-nums text-slate-900">{pipingExecutiveSummary.completionPct.toFixed(1)}%</div>
-                    <div className="mt-1 text-xs text-slate-600">of {Math.round(kpiData.total.target).toLocaleString()} WDI scope</div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-400 bg-slate-100 px-3 py-2.5">
-                    <div className="text-[11px] uppercase tracking-[0.14em] text-slate-500 font-bold">Remaining</div>
-                    <div className="mt-2 text-2xl font-black tabular-nums text-amber-700">{Math.round(pipingExecutiveSummary.remaining).toLocaleString()}</div>
-                    <div className="mt-1 text-xs text-slate-600">Open WDI balance</div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-400 bg-slate-100 px-3 py-2.5 col-span-2">
-                    <div className="flex items-center justify-between gap-3 text-sm">
-                      <span className="text-slate-600">Current vs required pace</span>
-                      <span className={`font-bold ${pipingExecutiveSummary.paceRatio >= 1 ? 'text-emerald-700' : pipingExecutiveSummary.paceRatio >= 0.85 ? 'text-amber-700' : 'text-rose-700'}`}>{(pipingExecutiveSummary.paceRatio * 100).toFixed(0)}%</span>
-                    </div>
-                    <div className="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden">
-                      <div className={`h-full rounded-full ${pipingExecutiveSummary.paceRatio >= 1 ? 'bg-emerald-400' : pipingExecutiveSummary.paceRatio >= 0.85 ? 'bg-amber-400' : 'bg-rose-400'}`} style={{ width: `${Math.max(8, Math.min(pipingExecutiveSummary.paceRatio * 100, 100))}%` }}></div>
-                    </div>
-                    <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
-                      <div>
-                        <div className="text-slate-500">Current pace</div>
-                        <div className="mt-1 font-bold text-sky-700 text-base tabular-nums">{Math.round(pipingExecutiveSummary.currentVelocity).toLocaleString()}</div>
-                      </div>
-                      <div>
-                        <div className="text-slate-500">Required pace</div>
-                        <div className="mt-1 font-bold text-fuchsia-700 text-base tabular-nums">{Math.round(pipingExecutiveSummary.requiredVelocity).toLocaleString()}</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-500 bg-white px-4 py-3">
-                    <div className="text-sm text-slate-600">Forecast finish</div>
-                    <div className="mt-2 text-xl font-black tabular-nums text-slate-900">{pipingExecutiveSummary.finishDateLabel}</div>
-                    <div className="mt-1 text-xs text-slate-500">Target {pipingExecutiveSummary.targetDateLabel}</div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-500 bg-white px-4 py-3">
-                    <div className="text-sm text-slate-600">Target variance</div>
-                    <div className={`mt-2 text-xl font-black tabular-nums ${pipingExecutiveSummary.variance >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>{Math.round(pipingExecutiveSummary.variance).toLocaleString()}</div>
-                    <div className="mt-1 text-xs text-slate-500">Actual minus target position</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 items-stretch print:grid-cols-4">
             <KPICard title="Total Progress" actual={kpiData.total.actual} target={kpiData.total.target} actualMt={kpiData.total.actualMt} targetMt={kpiData.total.targetMt} color={COLORS.station} icon="trending-up" />
@@ -8120,7 +7948,7 @@
       const occupiedBeds = Number(personnelSummary.total) || 0;
       const equipmentBreakdownPct = equipmentStatus.total > 0 ? (equipmentStatus.broken / equipmentStatus.total) * 100 : 0;
       const equipmentActivePct = equipmentStatus.total > 0 ? (equipmentStatus.active / equipmentStatus.total) * 100 : 0;
-      const reportDateDisplay = typeof reportDateLabel === 'string' ? reportDateLabel : '-';
+      const reportDateDisplay = SHARED_REPORT_DATE_LABEL;
       const tankOverallSummaryText = tankSummary.erectionPct >= tankSummary.weldingPct
         ? `Shell erection has reached ${tankSummary.actualErect.toFixed(0)} / ${tankSummary.totalErect.toFixed(0)} ton (${tankSummary.erectionPct.toFixed(2)}%), while welding stands at ${tankSummary.weldingPct.toFixed(2)}%.`
         : `Shell welding has reached ${tankSummary.actualWeld.toFixed(0)} / ${tankSummary.totalWeld.toFixed(0)} m (${tankSummary.weldingPct.toFixed(2)}%), while erection stands at ${tankSummary.erectionPct.toFixed(2)}%.`;
@@ -8129,7 +7957,7 @@
       const tankOverallErectRemaining = Math.max(0, Math.round(tankSummary.totalErect - tankSummary.actualErect));
       const tankOverallWeldRemaining = Math.max(0, Math.round(tankSummary.totalWeld - tankSummary.actualWeld));
       const tankOverallStatus = {
-    "dateLabel": "19 April 2026",
+    "dateLabel": "18 April 2026",
     "courseCompleted": 128,
     "courseTotal": 136,
     "coursePct": 94.12,
@@ -8204,7 +8032,7 @@
               <div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 overflow-hidden break-inside-avoid">
                 <h2 className="text-lg font-bold mb-4 flex items-center gap-2"><i data-lucide="home" style={{ width: 20, height: 20 }} className="text-slate-600" /> Camp Block Occupancy</h2>
                 <div className="overflow-x-auto">
-                  <table className="w-full text-xs text-left table-fixed"><thead className="text-[10px] text-slate-700 uppercase bg-slate-50 border-b"><tr><th className="px-1 md:px-2 py-2 w-[22%]">Block Name</th><th className="px-1 md:px-2 py-2 text-center w-[18%]">Nationality</th><th className="px-1 md:px-2 py-2 text-center w-[25%]">Filled/Cap</th><th className="px-1 md:px-2 py-2 text-center w-[25%]">Occupancy %</th><th className="px-1 md:px-2 py-2 text-center text-green-600 w-[10%]">Vacant</th></tr></thead><tbody>{campBlockData.map((row, idx) => (<tr key={idx} className="border-b hover:bg-slate-50"><td className="px-1 md:px-2 py-1.5 font-bold text-slate-900 truncate">{row.block}</td><td className="px-1 md:px-2 py-1.5 text-center"><span className={`px-1 py-0.5 rounded text-[10px] font-bold ${row.type === 'Turkish' ? 'bg-red-50 text-red-700' : row.type === 'Mixed' ? 'bg-purple-50 text-purple-700' : 'bg-blue-50 text-blue-700'}`}>{row.type}</span></td><td className="px-1 md:px-2 py-1.5 text-center text-slate-800 font-mono text-[10px]">{row.filled} <span className="text-slate-300">/</span> {row.capacity}</td><td className="px-1 md:px-2 py-1.5 text-center"><div className="flex items-center gap-1 justify-center"><div className="w-10 bg-slate-200 h-1 rounded-full overflow-hidden"><div className="h-full bg-slate-800" style={{ width: `${(row.filled / row.capacity) * 100}%` }}></div></div><span className="text-[10px] font-bold text-slate-800">%{(row.filled / row.capacity * 100).toFixed(0)}</span></div></td><td className="px-1 md:px-2 py-1.5 text-center font-bold text-green-600 bg-green-50/30 text-xs">{row.empty}</td></tr>))}</tbody></table>
+                  <table className="w-full text-xs text-left table-fixed"><thead className="text-[10px] text-slate-700 uppercase bg-slate-50 border-b"><tr><th className="px-1 md:px-2 py-2 w-[22%]">Block Name</th><th className="px-1 md:px-2 py-2 text-center w-[18%]">Nationality</th><th className="px-1 md:px-2 py-2 text-center w-[25%]">Filled/Cap</th><th className="px-1 md:px-2 py-2 text-center w-[25%]">Occupancy %</th><th className="px-1 md:px-2 py-2 text-center text-green-600 w-[10%]">Vacant</th></tr></thead><tbody>{campBlockData.map((row, idx) => (<tr key={idx} className="border-b hover:bg-slate-50"><td className="px-1 md:px-2 py-1.5 font-bold text-slate-900 truncate">{row.block}</td><td className="px-1 md:px-2 py-1.5 text-center"><span className={`px-1 py-0.5 rounded text-[10px] font-bold ${row.type === 'Turkish' ? 'bg-red-50 text-red-700' : (row.type === 'Turkish/TCN' || row.type === 'Mixed') ? 'bg-purple-50 text-purple-700' : 'bg-blue-50 text-blue-700'}`}>{row.type}</span></td><td className="px-1 md:px-2 py-1.5 text-center text-slate-800 font-mono text-[10px]">{row.filled} <span className="text-slate-300">/</span> {row.capacity}</td><td className="px-1 md:px-2 py-1.5 text-center"><div className="flex items-center gap-1 justify-center"><div className="w-10 bg-slate-200 h-1 rounded-full overflow-hidden"><div className="h-full bg-slate-800" style={{ width: `${(row.filled / row.capacity) * 100}%` }}></div></div><span className="text-[10px] font-bold text-slate-800">%{(row.filled / row.capacity * 100).toFixed(0)}</span></div></td><td className="px-1 md:px-2 py-1.5 text-center font-bold text-green-600 bg-green-50/30 text-xs">{row.empty}</td></tr>))}</tbody></table>
                 </div>
               </div>
               <div className="bg-slate-900 px-3 py-3 rounded-xl shadow-lg border border-slate-800 text-white break-inside-avoid">
