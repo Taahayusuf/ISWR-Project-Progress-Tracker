@@ -648,40 +648,54 @@
     },
     {
         "period": "10-Mar",
-        "station": 19943,
-        "tank": 3032,
+        "station": 4677.5,
+        "tank": 672,
         "pipeline": 1224,
-        "totalWDI": 24199
+        "totalWDI": 6573.5
+    },
+    {
+        "period": "17-Mar",
+        "station": 1870,
+        "tank": 594,
+        "pipeline": 1156,
+        "totalWDI": 3620
+    },
+    {
+        "period": "24-Mar",
+        "station": 3567.5,
+        "tank": 462,
+        "pipeline": 1576,
+        "totalWDI": 5605.5
     }
 ];
 
     const kpiData = {
     "total": {
-        "actual": 91429,
-        "target": 247504,
+        "actual": 96553,
+        "target": 250023,
         "label": "TOTAL PROGRESS",
-        "actualMt": 13324,
-        "targetMt": 20993
+        "actualMt": 14391,
+        "targetMt": 21069
     },
     "station": {
-        "actual": 41867,
-        "target": 109590,
+        "actual": 46253,
+        "target": 110001,
         "label": "STATION PIPING",
-        "actualMt": 3542,
+        "actualMt": 4471,
         "targetMt": 8605
     },
     "tank": {
-        "actual": 17202,
+        "actual": 17470,
         "target": 104530,
         "label": "TANK PIPING",
-        "actualMt": 2467,
+        "actualMt": 2588,
         "targetMt": 4989
     },
     "pipe": {
-        "actual": 32360,
-        "target": 33384,
+        "actual": 32708,
+        "target": 33864,
         "label": "PIPELINE",
-        "actualMt": 7315,
+        "actualMt": 7316,
         "targetMt": 7399
     }
 };
@@ -1047,30 +1061,62 @@
             "tankPlan": 0,
             "stationCumPlan": null,
             "pipeCumPlan": null,
-            "stationActual": 19943,
+            "stationActual": 4677.5,
             "pipeActual": 1224,
-            "tankActual": 3032,
-            "stationActualCum": 41867,
-            "pipeActualCum": 26996,
-            "tankActualCum": 17202,
-            "totalActualWdi": 24199
+            "tankActual": 672,
+            "stationActualCum": 46544.5,
+            "pipeActualCum": 28220,
+            "tankActualCum": 17874,
+            "totalActualWdi": 6573.5
+        },
+        {
+            "date": "17-Mar-26",
+            "period": "17-Mar",
+            "stationPlan": 0,
+            "pipePlan": 0,
+            "tankPlan": 0,
+            "stationCumPlan": null,
+            "pipeCumPlan": null,
+            "stationActual": 1870,
+            "pipeActual": 1156,
+            "tankActual": 594,
+            "stationActualCum": 48414.5,
+            "pipeActualCum": 29376,
+            "tankActualCum": 18468,
+            "totalActualWdi": 3620
+        },
+        {
+            "date": "24-Mar-26",
+            "period": "24-Mar",
+            "stationPlan": 0,
+            "pipePlan": 0,
+            "tankPlan": 0,
+            "stationCumPlan": null,
+            "pipeCumPlan": null,
+            "stationActual": 3567.5,
+            "pipeActual": 1576,
+            "tankActual": 462,
+            "stationActualCum": 51982,
+            "pipeActualCum": 30952,
+            "tankActualCum": 18930,
+            "totalActualWdi": 5605.5
         }
     ],
     "latestWeek": {
-        "date": "10-Mar-26",
-        "period": "10-Mar",
+        "date": "24-Mar-26",
+        "period": "24-Mar",
         "stationPlan": 0,
         "pipePlan": 0,
         "tankPlan": 0,
         "stationCumPlan": null,
         "pipeCumPlan": null,
-        "stationActual": 19943,
-        "pipeActual": 1224,
-        "tankActual": 3032,
-        "stationActualCum": 41867,
-        "pipeActualCum": 26996,
-        "tankActualCum": 17202,
-        "totalActualWdi": 24199
+        "stationActual": 3567.5,
+        "pipeActual": 1576,
+        "tankActual": 462,
+        "stationActualCum": 51982,
+        "pipeActualCum": 30952,
+        "tankActualCum": 18930,
+        "totalActualWdi": 5605.5
     },
     "monthlyTotals": [
         {
@@ -1189,136 +1235,100 @@
     "certifiedInvoices": 24
 };
     const personnelSummary = {
-    "total": 1448,
-    "turkish": 282,
-    "tcn": 1166,
-    "empty": 97
+    "total": 810,
+    "mapa": 747,
+    "rentalSubcon": 63,
+    "empty": 820
 };
     const campBlockData = [
     {
         "block": "A-BLOK",
         "type": "Turkish",
-        "filled": 66,
+        "filled": 55,
         "capacity": 89,
-        "empty": 23
+        "empty": 34
     },
     {
         "block": "B-BLOK",
         "type": "TCN",
-        "filled": 277,
+        "filled": 136,
         "capacity": 284,
-        "empty": 7
+        "empty": 148
     },
     {
         "block": "C-BLOK",
         "type": "TCN",
-        "filled": 257,
+        "filled": 156,
         "capacity": 266,
-        "empty": 9
+        "empty": 110
     },
     {
         "block": "D-BLOK",
         "type": "Turkish",
-        "filled": 150,
+        "filled": 140,
         "capacity": 189,
-        "empty": 39
+        "empty": 49
     },
     {
         "block": "E-BLOK",
         "type": "TCN",
-        "filled": 351,
+        "filled": 83,
         "capacity": 360,
-        "empty": 9
+        "empty": 277
     },
     {
         "block": "F-BLOK",
         "type": "TCN",
-        "filled": 37,
+        "filled": 0,
         "capacity": 40,
-        "empty": 3
+        "empty": 40
     },
     {
         "block": "G-BLOK",
         "type": "TCN",
-        "filled": 168,
-        "capacity": 171,
-        "empty": 3
+        "filled": 39,
+        "capacity": 175,
+        "empty": 136
     },
     {
         "block": "STAFF",
         "type": "Turkish/TCN",
-        "filled": 142,
+        "filled": 120,
         "capacity": 146,
-        "empty": 4
+        "empty": 26
     }
 ];
 
     const nationalityData = [
     {
         "nat": "TURKISH",
-        "labour": 210,
-        "staff": 72,
-        "total": 282
-    },
-    {
-        "nat": "AZERBAYCAN",
-        "labour": 6,
-        "staff": 1,
-        "total": 7
-    },
-    {
-        "nat": "BANGLADESH",
-        "labour": 613,
-        "staff": 1,
-        "total": 614
+        "labour": 55,
+        "staff": 202,
+        "total": 257
     },
     {
         "nat": "PAKISTAN",
-        "labour": 331,
-        "staff": 32,
-        "total": 363
+        "labour": 218,
+        "staff": 0,
+        "total": 218
     },
     {
         "nat": "INDIAN",
-        "labour": 138,
-        "staff": 27,
-        "total": 165
-    },
-    {
-        "nat": "NEPAL",
-        "labour": 1,
+        "labour": 130,
         "staff": 0,
-        "total": 1
+        "total": 130
     },
     {
-        "nat": "EGYPT",
-        "labour": 3,
-        "staff": 1,
-        "total": 4
-    },
-    {
-        "nat": "SRILANKA",
-        "labour": 1,
-        "staff": 1,
-        "total": 2
-    },
-    {
-        "nat": "SUDAN",
-        "labour": 1,
+        "nat": "BANGLADESH",
+        "labour": 106,
         "staff": 0,
-        "total": 1
+        "total": 106
     },
     {
-        "nat": "PHILIPPINES",
-        "labour": 1,
-        "staff": 0,
-        "total": 1
-    },
-    {
-        "nat": "GANA",
-        "labour": 1,
-        "staff": 0,
-        "total": 1
+        "nat": "AZERBAYCAN",
+        "labour": 0,
+        "staff": 7,
+        "total": 7
     },
     {
         "nat": "SAUDI",
@@ -1327,15 +1337,33 @@
         "total": 4
     },
     {
-        "nat": "ROMANIA",
+        "nat": "EGYPT",
         "labour": 0,
-        "staff": 1,
+        "staff": 2,
+        "total": 2
+    },
+    {
+        "nat": "SRILANKA",
+        "labour": 0,
+        "staff": 2,
+        "total": 2
+    },
+    {
+        "nat": "NEPAL",
+        "labour": 1,
+        "staff": 0,
         "total": 1
     },
     {
-        "nat": "BELARUS",
-        "labour": 0,
-        "staff": 1,
+        "nat": "SUDAN",
+        "labour": 1,
+        "staff": 0,
+        "total": 1
+    },
+    {
+        "nat": "GANA",
+        "labour": 1,
+        "staff": 0,
         "total": 1
     }
 ];
@@ -1388,7 +1416,7 @@
     {
         "name": "QA/QC",
         "mapa": {
-            "d": 0,
+            "d": 1,
             "i": 14,
             "s": 0
         },
@@ -1398,11 +1426,11 @@
         },
         "subcon": {
             "d": 0,
-            "i": 1
+            "i": 0
         },
         "total": {
-            "d": 0,
-            "i": 15,
+            "d": 1,
+            "i": 14,
             "s": 0,
             "all": 15
         }
@@ -1455,7 +1483,7 @@
         "name": "HSE",
         "mapa": {
             "d": 0,
-            "i": 27,
+            "i": 30,
             "s": 0
         },
         "rental": {
@@ -1468,37 +1496,37 @@
         },
         "total": {
             "d": 0,
-            "i": 27,
+            "i": 30,
             "s": 0,
-            "all": 27
+            "all": 30
         }
     },
     {
         "name": "CIVIL",
         "mapa": {
-            "d": 35,
-            "i": 5,
+            "d": 34,
+            "i": 9,
             "s": 0
         },
         "rental": {
-            "d": 81,
+            "d": 1,
             "i": 0
         },
         "subcon": {
-            "d": 30,
+            "d": 2,
             "i": 0
         },
         "total": {
-            "d": 146,
-            "i": 5,
+            "d": 37,
+            "i": 9,
             "s": 0,
-            "all": 151
+            "all": 46
         }
     },
     {
         "name": "SURVEY",
         "mapa": {
-            "d": 0,
+            "d": 1,
             "i": 10,
             "s": 0
         },
@@ -1511,43 +1539,43 @@
             "i": 0
         },
         "total": {
-            "d": 0,
+            "d": 1,
             "i": 10,
             "s": 0,
-            "all": 10
+            "all": 11
         }
     },
     {
         "name": "EARTHWORKS",
         "mapa": {
-            "d": 96,
+            "d": 93,
             "i": 1,
             "s": 0
         },
         "rental": {
-            "d": 14,
+            "d": 0,
             "i": 0
         },
         "subcon": {
-            "d": 12,
+            "d": 22,
             "i": 0
         },
         "total": {
-            "d": 122,
+            "d": 115,
             "i": 1,
             "s": 0,
-            "all": 123
+            "all": 116
         }
     },
     {
         "name": "ELECTRICAL",
         "mapa": {
-            "d": 27,
-            "i": 2,
+            "d": 28,
+            "i": 4,
             "s": 0
         },
         "rental": {
-            "d": 4,
+            "d": 0,
             "i": 0
         },
         "subcon": {
@@ -1555,43 +1583,21 @@
             "i": 0
         },
         "total": {
-            "d": 31,
-            "i": 2,
+            "d": 28,
+            "i": 4,
             "s": 0,
-            "all": 33
+            "all": 32
         }
     },
     {
         "name": "TANK",
         "mapa": {
-            "d": 127,
+            "d": 134,
             "i": 3,
             "s": 0
         },
         "rental": {
-            "d": 270,
-            "i": 0
-        },
-        "subcon": {
-            "d": 1,
-            "i": 0
-        },
-        "total": {
-            "d": 398,
-            "i": 3,
-            "s": 0,
-            "all": 401
-        }
-    },
-    {
-        "name": "PIPING",
-        "mapa": {
-            "d": 141,
-            "i": 2,
-            "s": 0
-        },
-        "rental": {
-            "d": 59,
+            "d": 0,
             "i": 0
         },
         "subcon": {
@@ -1599,10 +1605,32 @@
             "i": 0
         },
         "total": {
-            "d": 200,
+            "d": 134,
+            "i": 3,
+            "s": 0,
+            "all": 137
+        }
+    },
+    {
+        "name": "PIPING",
+        "mapa": {
+            "d": 136,
+            "i": 2,
+            "s": 0
+        },
+        "rental": {
+            "d": 13,
+            "i": 0
+        },
+        "subcon": {
+            "d": 0,
+            "i": 0
+        },
+        "total": {
+            "d": 149,
             "i": 2,
             "s": 0,
-            "all": 202
+            "all": 151
         }
     },
     {
@@ -1635,7 +1663,7 @@
             "s": 0
         },
         "rental": {
-            "d": 1,
+            "d": 0,
             "i": 0
         },
         "subcon": {
@@ -1643,10 +1671,10 @@
             "i": 0
         },
         "total": {
-            "d": 1,
+            "d": 0,
             "i": 5,
             "s": 0,
-            "all": 6
+            "all": 5
         }
     },
     {
@@ -1658,7 +1686,7 @@
         },
         "rental": {
             "d": 0,
-            "i": 8
+            "i": 0
         },
         "subcon": {
             "d": 0,
@@ -1666,9 +1694,9 @@
         },
         "total": {
             "d": 0,
-            "i": 22,
+            "i": 14,
             "s": 0,
-            "all": 22
+            "all": 14
         }
     },
     {
@@ -1679,18 +1707,18 @@
             "s": 0
         },
         "rental": {
-            "d": 73,
+            "d": 4,
             "i": 0
         },
         "subcon": {
-            "d": 19,
+            "d": 6,
             "i": 0
         },
         "total": {
-            "d": 109,
+            "d": 27,
             "i": 0,
             "s": 0,
-            "all": 109
+            "all": 27
         }
     },
     {
@@ -1741,7 +1769,7 @@
         "name": "HR",
         "mapa": {
             "d": 0,
-            "i": 6,
+            "i": 7,
             "s": 0
         },
         "rental": {
@@ -1754,9 +1782,9 @@
         },
         "total": {
             "d": 0,
-            "i": 6,
+            "i": 7,
             "s": 0,
-            "all": 6
+            "all": 7
         }
     },
     {
@@ -1785,7 +1813,7 @@
         "name": "CAMP",
         "mapa": {
             "d": 0,
-            "i": 22,
+            "i": 20,
             "s": 37
         },
         "rental": {
@@ -1798,17 +1826,17 @@
         },
         "total": {
             "d": 0,
-            "i": 22,
+            "i": 20,
             "s": 37,
-            "all": 59
+            "all": 57
         }
     },
     {
         "name": "ADMIN",
         "mapa": {
             "d": 0,
-            "i": 19,
-            "s": 21
+            "i": 20,
+            "s": 0
         },
         "rental": {
             "d": 0,
@@ -1816,13 +1844,13 @@
         },
         "subcon": {
             "d": 0,
-            "i": 9
+            "i": 0
         },
         "total": {
             "d": 0,
-            "i": 28,
-            "s": 24,
-            "all": 52
+            "i": 20,
+            "s": 0,
+            "all": 20
         }
     },
     {
@@ -1838,24 +1866,24 @@
         },
         "subcon": {
             "d": 0,
-            "i": 3
+            "i": 10
         },
         "total": {
             "d": 0,
-            "i": 3,
+            "i": 10,
             "s": 0,
-            "all": 3
+            "all": 10
         }
     },
     {
         "name": "ADR STR.",
         "mapa": {
-            "d": 38,
+            "d": 55,
             "i": 1,
             "s": 0
         },
         "rental": {
-            "d": 67,
+            "d": 0,
             "i": 0
         },
         "subcon": {
@@ -1863,50 +1891,205 @@
             "i": 0
         },
         "total": {
-            "d": 105,
+            "d": 55,
             "i": 1,
             "s": 0,
-            "all": 106
+            "all": 56
         }
     },
     {
         "name": "PAINTING",
         "mapa": {
-            "d": 22,
+            "d": 21,
             "i": 1,
             "s": 0
         },
         "rental": {
-            "d": 43,
+            "d": 5,
             "i": 0
         },
         "subcon": {
-            "d": 6,
-            "i": 1
+            "d": 0,
+            "i": 0
         },
         "total": {
-            "d": 71,
-            "i": 2,
+            "d": 26,
+            "i": 1,
             "s": 0,
-            "all": 73
+            "all": 27
         }
     }
 ];
 
     const equipmentStatus = {
-    "total": 426,
-    "active": 408,
-    "broken": 17,
-    "idle": 1
+    "total": 365,
+    "active": 365,
+    "broken": 0,
+    "idle": 0
 };
     const detailedEquipmentList = [
     {
+        "type": "Generator",
+        "total": 52,
+        "broken": 0
+    },
+    {
+        "type": "Excavator",
+        "total": 39,
+        "broken": 0
+    },
+    {
+        "type": "Pick-Up",
+        "total": 34,
+        "broken": 0
+    },
+    {
+        "type": "Manlift",
+        "total": 28,
+        "broken": 0
+    },
+    {
+        "type": "Dump Truck",
+        "total": 21,
+        "broken": 0
+    },
+    {
         "type": "Air Compressor (Diesel)",
-        "total": 12,
+        "total": 18,
+        "broken": 0
+    },
+    {
+        "type": "Tower Light",
+        "total": 18,
+        "broken": 0
+    },
+    {
+        "type": "Jeep",
+        "total": 17,
+        "broken": 0
+    },
+    {
+        "type": "Bus",
+        "total": 14,
+        "broken": 0
+    },
+    {
+        "type": "Forklift",
+        "total": 10,
+        "broken": 0
+    },
+    {
+        "type": "Mini Bus (Coaster)",
+        "total": 10,
+        "broken": 0
+    },
+    {
+        "type": "Truck Head",
+        "total": 10,
+        "broken": 0
+    },
+    {
+        "type": "Trailer",
+        "total": 9,
+        "broken": 0
+    },
+    {
+        "type": "Crane",
+        "total": 7,
+        "broken": 0
+    },
+    {
+        "type": "Mini Truck",
+        "total": 7,
+        "broken": 0
+    },
+    {
+        "type": "Crawler Crane",
+        "total": 6,
+        "broken": 0
+    },
+    {
+        "type": "Hammer",
+        "total": 6,
+        "broken": 0
+    },
+    {
+        "type": "Water Tanker",
+        "total": 6,
+        "broken": 0
+    },
+    {
+        "type": "Boom Truck",
+        "total": 5,
+        "broken": 0
+    },
+    {
+        "type": "Compact Roller",
+        "total": 4,
+        "broken": 0
+    },
+    {
+        "type": "Wheel Loader",
+        "total": 4,
+        "broken": 0
+    },
+    {
+        "type": "Air Compressor (Electric)",
+        "total": 3,
         "broken": 0
     },
     {
         "type": "Ambulance",
+        "total": 3,
+        "broken": 0
+    },
+    {
+        "type": "Grader",
+        "total": 3,
+        "broken": 0
+    },
+    {
+        "type": "Hidrolik Ripper",
+        "total": 3,
+        "broken": 0
+    },
+    {
+        "type": "Paywelder",
+        "total": 3,
+        "broken": 0
+    },
+    {
+        "type": "Bulldozer",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Diesel Tanker",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Lathe Machine",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Mobile Crane 90t",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Mobile Crane 160t",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Sewage Tanker",
+        "total": 2,
+        "broken": 0
+    },
+    {
+        "type": "Skid Steer Loader",
         "total": 2,
         "broken": 0
     },
@@ -1916,88 +2099,18 @@
         "broken": 0
     },
     {
-        "type": "Boom Truck",
-        "total": 5,
-        "broken": 0
-    },
-    {
-        "type": "Bulldozer",
-        "total": 2,
-        "broken": 0
-    },
-    {
-        "type": "Bus",
-        "total": 6,
-        "broken": 0
-    },
-    {
-        "type": "Coaster",
-        "total": 11,
-        "broken": 0
-    },
-    {
-        "type": "Compact Roller 10t",
-        "total": 2,
-        "broken": 2
-    },
-    {
-        "type": "Compact Roller 25t",
+        "type": "Concrete Spraying",
         "total": 1,
         "broken": 0
     },
     {
-        "type": "Compact Roller 2t",
+        "type": "Filling Pump",
         "total": 1,
         "broken": 0
     },
     {
-        "type": "Crawler Crane",
-        "total": 4,
-        "broken": 0
-    },
-    {
-        "type": "Diesel Tanker",
-        "total": 2,
-        "broken": 0
-    },
-    {
-        "type": "Dump Truck",
-        "total": 24,
-        "broken": 0
-    },
-    {
-        "type": "Excavator",
-        "total": 33,
-        "broken": 0
-    },
-    {
-        "type": "Forklift",
-        "total": 8,
-        "broken": 0
-    },
-    {
-        "type": "Generator",
-        "total": 52,
-        "broken": 0
-    },
-    {
-        "type": "Grader",
-        "total": 3,
-        "broken": 0
-    },
-    {
-        "type": "Jeep",
-        "total": 17,
-        "broken": 2
-    },
-    {
-        "type": "Lathe Machine",
-        "total": 2,
-        "broken": 0
-    },
-    {
-        "type": "Manlift",
-        "total": 17,
+        "type": "Internal Clamp",
+        "total": 1,
         "broken": 0
     },
     {
@@ -2006,32 +2119,7 @@
         "broken": 0
     },
     {
-        "type": "Mini Bus",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Mini Truck",
-        "total": 5,
-        "broken": 0
-    },
-    {
-        "type": "Mobile Crane - 60t",
-        "total": 2,
-        "broken": 0
-    },
-    {
-        "type": "Mobile Crane - 80t",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Mobile Crane 90t",
-        "total": 4,
-        "broken": 0
-    },
-    {
-        "type": "Mobile Crane 160t",
+        "type": "Minibus",
         "total": 1,
         "broken": 0
     },
@@ -2046,23 +2134,8 @@
         "broken": 0
     },
     {
-        "type": "Pick-Up",
-        "total": 34,
-        "broken": 1
-    },
-    {
         "type": "Rock Drill",
         "total": 1,
-        "broken": 1
-    },
-    {
-        "type": "Sewage Tanker",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Skid Steer Loader",
-        "total": 2,
         "broken": 0
     },
     {
@@ -2071,61 +2144,11 @@
         "broken": 0
     },
     {
-        "type": "Tower Light",
-        "total": 39,
-        "broken": 6
-    },
-    {
-        "type": "Truck + Trailer",
-        "total": 9,
-        "broken": 2
-    },
-    {
-        "type": "Truck + Trailer (Low Bed)",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Water Tanker",
-        "total": 6,
-        "broken": 0
-    },
-    {
-        "type": "Welding Plant",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Concrete Pump",
-        "total": 1,
-        "broken": 0
-    },
-    {
-        "type": "Electric Welding Machine",
-        "total": 58,
-        "broken": 0
-    },
-    {
         "type": "Welding Machine",
-        "total": 42,
-        "broken": 0
-    },
-    {
-        "type": "Paywelder",
-        "total": 3,
-        "broken": 1
-    },
-    {
-        "type": "Internal Clamp",
         "total": 1,
         "broken": 0
-    },
-    {
-        "type": "Wheel Loader",
-        "total": 4,
-        "broken": 2
     }
-].sort((a, b) => b.total - a.total);
+];
 
     const financialSummary = {
     "contractValue": 1307551012.21,
@@ -3684,76 +3707,88 @@
 
     const tankMonthlyData = [
     {
+        "month": "Mar-25",
+        "erectionTon": null,
+        "erectionQty": 0,
+        "courseQty": 2
+    },
+    {
+        "month": "Apr-25",
+        "erectionTon": null,
+        "erectionQty": 0,
+        "courseQty": 4
+    },
+    {
         "month": "May-25",
         "erectionTon": 1294.56,
         "erectionQty": 16407,
-        "weldingM": 0
+        "courseQty": 6
     },
     {
         "month": "Jun-25",
         "erectionTon": 419.4,
         "erectionQty": 20021,
-        "weldingM": 0
+        "courseQty": 5
     },
     {
         "month": "Jul-25",
         "erectionTon": 1638.77,
         "erectionQty": 27942,
-        "weldingM": 0
+        "courseQty": 7
     },
     {
         "month": "Aug-25",
         "erectionTon": 1609.95,
         "erectionQty": 47658,
-        "weldingM": 0
+        "courseQty": 7
     },
     {
-        "month": "Sept-25",
+        "month": "Sep-25",
         "erectionTon": 1552.47,
         "erectionQty": 46706,
-        "weldingM": 0
+        "courseQty": 8
     },
     {
         "month": "Oct-25",
         "erectionTon": 1992.34,
         "erectionQty": 57708,
-        "weldingM": 0
+        "courseQty": 10
     },
     {
         "month": "Nov-25",
         "erectionTon": 3242.78,
         "erectionQty": 91883,
-        "weldingM": 0
+        "courseQty": 15
     },
     {
         "month": "Dec-25",
         "erectionTon": 2029.13,
         "erectionQty": 84020,
-        "weldingM": 0
+        "courseQty": 15
     },
     {
         "month": "Jan-26",
         "erectionTon": 1784.68,
         "erectionQty": 94186,
-        "weldingM": 0
+        "courseQty": 13
     },
     {
         "month": "Feb-26",
         "erectionTon": 1604,
         "erectionQty": 105435,
-        "weldingM": 9
+        "courseQty": 9
     },
     {
         "month": "Mar-26",
         "erectionTon": 809,
         "erectionQty": 113262,
-        "weldingM": 8
+        "courseQty": 9
     },
     {
         "month": "Apr-26",
         "erectionTon": 1507,
         "erectionQty": 119786,
-        "weldingM": 14
+        "courseQty": 13
     }
 ];
 
@@ -4175,7 +4210,7 @@
 
     const civilSummary = {
     "totalConcrete": 25019,
-    "completed": 16378
+    "completed": 16402
 };
 
     const unitManhourData = [
@@ -4210,11 +4245,11 @@
         "item": "Excavation / ISWR",
         "unit": "m³",
         "total": 2140104,
-        "actual": 2118709,
-        "remaining": 21395,
-        "percent": "99.00",
-        "weeklyPlanned": 4761,
-        "weeklyActual": 2000,
+        "actual": 2119709,
+        "remaining": 20395,
+        "percent": "99.05",
+        "weeklyPlanned": 5355,
+        "weeklyActual": 1000,
         "category": "Earthworks",
         "color": "bg-stone-100 text-stone-900",
         "barColor": "#78716c"
@@ -4223,11 +4258,11 @@
         "item": "Backfilling / ISWR",
         "unit": "m³",
         "total": 1957813,
-        "actual": 1909303,
-        "remaining": 48510,
-        "percent": "97.52",
-        "weeklyPlanned": 4853,
-        "weeklyActual": 2000,
+        "actual": 1934327,
+        "remaining": 23486,
+        "percent": "98.80",
+        "weeklyPlanned": 3263,
+        "weeklyActual": 25024,
         "category": "Earthworks",
         "color": "bg-stone-100 text-stone-900",
         "barColor": "#78716c"
@@ -4252,7 +4287,7 @@
         "actual": 387,
         "remaining": 3,
         "percent": "99.23",
-        "weeklyPlanned": 1,
+        "weeklyPlanned": 4,
         "weeklyActual": 0,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
@@ -4265,8 +4300,8 @@
         "actual": 5258,
         "remaining": 620,
         "percent": "89.45",
-        "weeklyPlanned": 4,
-        "weeklyActual": 6,
+        "weeklyPlanned": 25,
+        "weeklyActual": 0,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
         "barColor": "#eab308"
@@ -4275,11 +4310,11 @@
         "item": "Buildings - Rebar",
         "unit": "ton",
         "total": 1090,
-        "actual": 1040,
-        "remaining": 50,
-        "percent": "95.41",
-        "weeklyPlanned": 3,
-        "weeklyActual": 8,
+        "actual": 1042,
+        "remaining": 48,
+        "percent": "95.60",
+        "weeklyPlanned": 4,
+        "weeklyActual": 3,
         "category": "Civ: Buildings",
         "color": "bg-yellow-100 text-yellow-900",
         "barColor": "#eab308"
@@ -4290,7 +4325,7 @@
         "total": 189,
         "actual": 139,
         "remaining": 50,
-        "percent": "73.54",
+        "percent": "73.47",
         "weeklyPlanned": 0,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
@@ -4303,8 +4338,8 @@
         "total": 95,
         "actual": 41,
         "remaining": 54,
-        "percent": "43.16",
-        "weeklyPlanned": 0,
+        "percent": "43.45",
+        "weeklyPlanned": 4,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
@@ -4316,8 +4351,8 @@
         "total": 1742,
         "actual": 1344,
         "remaining": 398,
-        "percent": "77.15",
-        "weeklyPlanned": 4,
+        "percent": "77.16",
+        "weeklyPlanned": 14,
         "weeklyActual": 0,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
@@ -4327,11 +4362,11 @@
         "item": "Shafts - Rebar",
         "unit": "ton",
         "total": 433,
-        "actual": 303,
-        "remaining": 130,
-        "percent": "69.98",
-        "weeklyPlanned": 7,
-        "weeklyActual": 0,
+        "actual": 304,
+        "remaining": 129,
+        "percent": "70.21",
+        "weeklyPlanned": 16,
+        "weeklyActual": 1,
         "category": "Civ: Shafts",
         "color": "bg-amber-100 text-amber-900",
         "barColor": "#f59e0b"
@@ -4340,11 +4375,11 @@
         "item": "UG Items - Reinforced Concrete",
         "unit": "m³",
         "total": 5567,
-        "actual": 686,
-        "remaining": 4881,
-        "percent": "12.32",
+        "actual": 710,
+        "remaining": 4857,
+        "percent": "12.75",
         "weeklyPlanned": 0,
-        "weeklyActual": 141,
+        "weeklyActual": 24,
         "category": "Civ: UG Items",
         "color": "bg-lime-100 text-lime-900",
         "barColor": "#84cc16"
@@ -4353,11 +4388,11 @@
         "item": "UG Items - Rebar",
         "unit": "ton",
         "total": 252,
-        "actual": 105,
-        "remaining": 147,
-        "percent": "41.67",
+        "actual": 110,
+        "remaining": 142,
+        "percent": "43.77",
         "weeklyPlanned": 0,
-        "weeklyActual": 36,
+        "weeklyActual": 5.5,
         "category": "Civ: UG Items",
         "color": "bg-lime-100 text-lime-900",
         "barColor": "#84cc16"
@@ -4368,7 +4403,7 @@
         "total": 800,
         "actual": 16,
         "remaining": 784,
-        "percent": "2.00",
+        "percent": "1.94",
         "weeklyPlanned": 0,
         "weeklyActual": 0,
         "category": "Civ: Drainage",
@@ -4417,12 +4452,12 @@
     {
         "item": "Pipeline (Welding)",
         "unit": "wdi",
-        "total": 36528,
-        "actual": 31960,
-        "remaining": 4568,
-        "percent": "87.49",
-        "weeklyPlanned": 1524,
-        "weeklyActual": 612,
+        "total": 33864,
+        "actual": 32640,
+        "remaining": 1224,
+        "percent": "96.39",
+        "weeklyPlanned": 1449,
+        "weeklyActual": 680,
         "category": "Piping",
         "color": "bg-indigo-100 text-indigo-900",
         "barColor": "#4f46e5"
@@ -4430,12 +4465,12 @@
     {
         "item": "Pipeline (Erection)",
         "unit": "m",
-        "total": 7290,
-        "actual": 7262,
-        "remaining": 28,
-        "percent": "99.62",
-        "weeklyPlanned": 366,
-        "weeklyActual": 139,
+        "total": 7316,
+        "actual": 7316,
+        "remaining": 0,
+        "percent": "100.00",
+        "weeklyPlanned": 497,
+        "weeklyActual": 54,
         "category": "Piping",
         "color": "bg-indigo-100 text-indigo-900",
         "barColor": "#4f46e5"
@@ -4572,7 +4607,7 @@
         "bottomWeld": 90.93,
         "totalErectTon": 2175192,
         "erectedTon": 2138098,
-        "remainErectTon": 37093,
+        "remainErectTon": 37094,
         "totalWeldM": 46451,
         "weldedM": 45182,
         "remainWeldM": 1269
@@ -4613,14 +4648,14 @@
         "statusColor": "bg-red-100 text-red-700",
         "borderColor": "border-red-600",
         "color": "bg-red-600",
-        "overall": 40.36,
+        "overall": 41.88,
         "bottomWeld": 47.07,
         "totalErectTon": 2175190,
         "erectedTon": 1110020,
         "remainErectTon": 1065170,
-        "totalWeldM": 46270,
-        "weldedM": 7148,
-        "remainWeldM": 39122
+        "totalWeldM": 46269,
+        "weldedM": 9490,
+        "remainWeldM": 36779
     },
     {
         "name": "TANK-05",
@@ -4688,11 +4723,11 @@
         "statusColor": "bg-yellow-100 text-yellow-700",
         "borderColor": "border-amber-500",
         "color": "bg-amber-500",
-        "overall": 91.19,
+        "overall": 92.26,
         "bottomWeld": 0,
-        "totalErectTon": 2175190,
-        "erectedTon": 2089210,
-        "remainErectTon": 85980,
+        "totalErectTon": 2175190.0,
+        "erectedTon": 2127953.6,
+        "remainErectTon": 47236.4,
         "totalWeldM": 46451,
         "weldedM": 36848,
         "remainWeldM": 9603
@@ -4725,7 +4760,7 @@
         "remainErectTon": 137050,
         "totalWeldM": 46451,
         "weldedM": 35716,
-        "remainWeldM": 10735
+        "remainWeldM": 10736
     },
     {
         "name": "TANK-12",
@@ -4733,14 +4768,14 @@
         "statusColor": "bg-red-100 text-red-700",
         "borderColor": "border-red-600",
         "color": "bg-red-600",
-        "overall": 76.68,
+        "overall": 77.52,
         "bottomWeld": 0,
-        "totalErectTon": 2175190,
-        "erectedTon": 1848773,
-        "remainErectTon": 326417,
+        "totalErectTon": 2175190.0,
+        "erectedTon": 1848773.2,
+        "remainErectTon": 326416.8,
         "totalWeldM": 46451,
-        "weldedM": 23519,
-        "remainWeldM": 22932
+        "weldedM": 26563,
+        "remainWeldM": 19888
     },
     {
         "name": "TANK-A",
@@ -4750,12 +4785,12 @@
         "color": "bg-emerald-600",
         "overall": 97.06,
         "bottomWeld": 100,
-        "totalErectTon": 2059031,
-        "erectedTon": 1984502,
-        "remainErectTon": 74529,
+        "totalErectTon": 2059030.8,
+        "erectedTon": 1984502.0,
+        "remainErectTon": 74528.8,
         "totalWeldM": 44586,
         "weldedM": 43969,
-        "remainWeldM": 617
+        "remainWeldM": 618
     },
     {
         "name": "TANK-B",
@@ -4765,9 +4800,9 @@
         "color": "bg-emerald-600",
         "overall": 96.33,
         "bottomWeld": 88.47,
-        "totalErectTon": 2059031,
-        "erectedTon": 1984502,
-        "remainErectTon": 74529,
+        "totalErectTon": 2059030.8,
+        "erectedTon": 1984502.0,
+        "remainErectTon": 74528.8,
         "totalWeldM": 44586,
         "weldedM": 42896,
         "remainWeldM": 1690
@@ -4778,14 +4813,14 @@
         "statusColor": "bg-green-100 text-green-700",
         "borderColor": "border-emerald-600",
         "color": "bg-emerald-600",
-        "overall": 95.51,
-        "bottomWeld": 82.8,
-        "totalErectTon": 2059032,
-        "erectedTon": 1966039,
-        "remainErectTon": 92994,
+        "overall": 95.55,
+        "bottomWeld": 83.53,
+        "totalErectTon": 2059032.4,
+        "erectedTon": 1966038.8,
+        "remainErectTon": 92993.6,
         "totalWeldM": 44586,
-        "weldedM": 42606,
-        "remainWeldM": 1981
+        "weldedM": 42673,
+        "remainWeldM": 1913
     },
     {
         "name": "BUFFER-1",
@@ -4795,9 +4830,9 @@
         "color": "bg-red-600",
         "overall": 47.71,
         "bottomWeld": 0,
-        "totalErectTon": 346406,
-        "erectedTon": 168099,
-        "remainErectTon": 178307,
+        "totalErectTon": 346405.5,
+        "erectedTon": 168098.9,
+        "remainErectTon": 178306.6,
         "totalWeldM": 15153,
         "weldedM": 5673,
         "remainWeldM": 9480
@@ -4810,9 +4845,9 @@
         "color": "bg-amber-500",
         "overall": 56.94,
         "bottomWeld": 0,
-        "totalErectTon": 346406,
-        "erectedTon": 203634,
-        "remainErectTon": 142772,
+        "totalErectTon": 346405.5,
+        "erectedTon": 203633.6,
+        "remainErectTon": 142771.9,
         "totalWeldM": 15154,
         "weldedM": 7230,
         "remainWeldM": 7924
@@ -5881,9 +5916,9 @@
         "sortOrder": 3
     }
 ];
-    const STRATEGIC_TANKS = tankBottomSummaryData.filter((t) => t.type === 'Strategic');
-    const BUFFER_TANKS = tankBottomSummaryData.filter((t) => t.type === 'Buffer');
-    const OPERATIONAL_TANKS = tankBottomSummaryData.filter((t) => t.type === 'Operational');
+    const STRATEGIC_TANKS = tankBottomSummaryData.filter((t) => t.groupTitle === 'Strategic Tanks');
+    const BUFFER_TANKS = tankBottomSummaryData.filter((t) => t.groupTitle === 'Buffer Tanks');
+    const OPERATIONAL_TANKS = tankBottomSummaryData.filter((t) => t.groupTitle === 'Operational Tanks');
     const BOTTOM_TANK_SUMMARY = tankBottomSummaryData;
 
     const bottomStatusColor = {
@@ -6167,9 +6202,9 @@
       return [...rows].reverse().find((row) => keyList.some((key) => Number(row[key]) > 0)) || { [fallbackPeriodKey]: '-' };
     };
 
-    const COVER_REPORT_DATE = '21 April 2026';
+    const COVER_REPORT_DATE = '24 April 2026';
     const COVER_REPORT_WEEK_LABEL = 'Week 17 of 2026';
-    const SHARED_REPORT_DATE_LABEL = '21 APRIL 2026';
+    const SHARED_REPORT_DATE_LABEL = '24 APRIL 2026';
 
     const PipingSection = () => {
       const mergedData = useMemo(() => (
@@ -6229,6 +6264,111 @@
       };
 
       const reportDateLabel = SHARED_REPORT_DATE_LABEL;
+
+      const formatCount = (value) => Number(value || 0).toLocaleString('en-US');
+      const formatProgress = (value) => {
+        const numeric = Number(value || 0);
+        if (Number.isInteger(numeric)) return `${numeric}%`;
+        return `${numeric.toFixed(2).replace(/0+$/, '').replace(/\.$/, '')}%`;
+      };
+
+      const dailyProgressRows = [
+        {
+          label: 'Station Piping Total WDI',
+          tone: 'blue',
+          wdi: { total: 110001, completed: 46253, prev: 45927, daily: 326, remaining: 63748, progress: 42.05 },
+          pipe: { total: 8605, laying: 4038, completed: 4471, prev: 4462, daily: 9, remaining: 4134, progress: 52 },
+          joints: { total: 4289, completed: 1023, prev: 1012, daily: 11 }
+        },
+        {
+          label: 'Tank Piping Total WDI',
+          tone: 'violet',
+          wdi: { total: 104530, completed: 17470, prev: 17470, daily: 0, remaining: 87060, progress: 16.7 },
+          pipe: { total: 4989, laying: 708, completed: 2588, prev: 2588, daily: 0, remaining: 2402, progress: 52 },
+          joints: { total: 5332, completed: 2267, prev: 2267, daily: 0 }
+        },
+        {
+          label: 'Pipe Line Total WDI',
+          tone: 'emerald',
+          wdi: { total: 33864, completed: 32708, prev: 32708, daily: 0, remaining: 1156, progress: 96.6 },
+          pipe: { total: 7399, laying: 7292, completed: 7316, prev: 7316, daily: 0, remaining: 83, progress: 99 },
+          joints: { total: 548, completed: 481, prev: 481, daily: 0 }
+        },
+        {
+          label: 'Vent and Drain',
+          tone: 'amber',
+          wdi: { total: 1628, completed: 122, prev: 114, daily: 8, remaining: 1506, progress: 7.5 },
+          pipe: { total: 75, laying: 8, completed: 17, prev: 17, daily: 0, remaining: 59, progress: 22 },
+          joints: { total: 117, completed: 18, prev: 17, daily: 1 }
+        },
+        {
+          label: 'Grand Total WDI',
+          tone: 'slate',
+          grand: true,
+          wdi: { total: 250023, completed: 96553, prev: 96219, daily: 334, remaining: 153470, progress: 38.6 },
+          pipe: { total: 21069, laying: 12046, completed: 14391, prev: 14382, daily: 9, remaining: 6677, progress: 68 },
+          joints: { total: 10286, completed: 3789, prev: 3777, daily: 12 }
+        }
+      ];
+
+      const coatingProgressRows = [
+        {
+          label: 'Station Piping Total WDI QTY',
+          tone: 'blue',
+          joints: { total: 4239, completed: 1023 },
+          fbe: { total: 3954, completed: 499, prev: 499, daily: 0, progress: 13 },
+          liquidEpoxy: { total: 293, completed: 116, prev: 115, daily: 1 },
+          coverage: { hdpeUnderground: 1870, epoxyAboveGround: 2369 },
+          external: { completed: 493, prev: 492, daily: 1, remaining: 1377 }
+        },
+        {
+          label: 'Tank Piping Total WDI QTY',
+          tone: 'violet',
+          joints: { total: 5332, completed: 2267 },
+          fbe: { total: 0, completed: 0, prev: 0, daily: 0, progress: 0 },
+          liquidEpoxy: { total: 0, completed: 0, prev: 0, daily: 0 },
+          coverage: { hdpeUnderground: 0, epoxyAboveGround: 0 },
+          external: { completed: 0, prev: 0, daily: 0, remaining: 0 }
+        },
+        {
+          label: 'Pipe Line Total WDI QTY',
+          tone: 'emerald',
+          joints: { total: 665, completed: 499 },
+          fbe: { total: 0, completed: 0, prev: 0, daily: 0, progress: 0 },
+          liquidEpoxy: { total: 0, completed: 0, prev: 0, daily: 0 },
+          coverage: { hdpeUnderground: 543, epoxyAboveGround: 0 },
+          external: { completed: 467, prev: 467, daily: 0, remaining: 76 }
+        },
+        {
+          label: 'Grand Total WDI QTY',
+          tone: 'slate',
+          grand: true,
+          joints: { total: 10236, completed: 3789 },
+          fbe: { total: 3954, completed: 499, prev: 499, daily: 0, progress: 13 },
+          liquidEpoxy: { total: 293, completed: 116, prev: 115, daily: 1 },
+          coverage: { hdpeUnderground: 2413, epoxyAboveGround: 2369 },
+          external: { completed: 960, prev: 959, daily: 1, remaining: 1453 }
+        }
+      ];
+
+      const pipeMaterialLogisticsRows = [
+        { kind: 'group', label: 'Station Piping' },
+        { kind: 'row', label: 'pipe >16 Hatboru', indent: 1, total: 7676, shippedJuranah: 7366, other: 158, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 310, progress: 96 },
+        { kind: 'row', label: 'pipe <16', indent: 1, total: 929, shippedJuranah: 36, other: 0, shippedApco: 0, deliveredApco: 685, deliveredValve: 0, remaining: 208, progress: 78 },
+        { kind: 'row', label: 'Fittings', indent: 1, total: 4197, shippedJuranah: 314, other: 35, shippedApco: 528, deliveredApco: 85, deliveredValve: 0, remaining: 3848, progress: 8 },
+        { kind: 'row', label: 'Valve', indent: 1, total: 630, shippedJuranah: 0, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 88, remaining: 542, progress: 14 },
+        { kind: 'group', label: 'Tank Piping' },
+        { kind: 'row', label: 'pipe', indent: 1, total: 4958, shippedJuranah: 4561, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 397, progress: 92 },
+        { kind: 'row', label: 'Fittings', indent: 1, total: 1379, shippedJuranah: 1218, other: 22, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 139, progress: 90 },
+        { kind: 'row', label: 'Valve', indent: 1, total: 0, shippedJuranah: 0, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 0, progress: 0 },
+        { kind: 'group', label: 'Pipe Line' },
+        { kind: 'row', label: 'pipe', indent: 1, total: 7370, shippedJuranah: 7370, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 0, progress: 100 },
+        { kind: 'row', label: 'Fittings', indent: 1, total: 38, shippedJuranah: 6, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 32, progress: 16 },
+        { kind: 'row', label: 'Valve', indent: 1, total: 6, shippedJuranah: 0, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 6, progress: 0 },
+        { kind: 'grand', label: 'Grand Total Pipe', total: 20937, shippedJuranah: 19333, other: 158, shippedApco: 0, deliveredApco: 685, deliveredValve: 0, remaining: 1446, progress: 93 },
+        { kind: 'grand', label: 'Grand Total Fittings', total: 5614, shippedJuranah: 1538, other: 57, shippedApco: 528, deliveredApco: 85, deliveredValve: 0, remaining: 3491, progress: 38 },
+        { kind: 'grand', label: 'Grand Total Valves', total: 636, shippedJuranah: 0, other: 0, shippedApco: 0, deliveredApco: 0, deliveredValve: 0, remaining: 636, progress: 0 }
+      ];
 
       const forecastData = useMemo(() => {
         const recentWeeks = pipingWeeklyActuals.slice(-5);
@@ -6382,6 +6522,193 @@
           </div>
 
           <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-1"></div>
+
+          <div className="space-y-6 break-inside-avoid print:space-y-4">
+            <section className="rounded-[24px] border border-slate-200 bg-white shadow-sm overflow-hidden break-inside-avoid">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200 bg-slate-50/80 px-4 py-3 print:bg-white">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Current Daily Progress - 23 Apr 2026</p>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2 mt-1"><i data-lucide="clipboard-list" style={{ width: 18, height: 18 }} className="text-blue-600" /> DAILY PROGRESS</h2>
+                </div>
+                <div className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[11px] font-bold text-blue-700 w-fit">WDI / Mt / Qty / %</div>
+              </div>
+              <div className="overflow-x-auto print:text-[10px]">
+                <table className="w-full min-w-[980px] text-[11px] sm:text-xs text-left">
+                  <thead className="bg-slate-100 text-slate-700 uppercase tracking-[0.08em] border-b border-slate-200">
+                    <tr>
+                      <th rowSpan="2" className="px-3 py-3 font-bold text-slate-900 align-middle">Activity</th>
+                      <th colSpan="3" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-blue-700">WDI</th>
+                      <th colSpan="3" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-emerald-700">Pipe Length (Mt)</th>
+                      <th colSpan="3" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-violet-700">Joint Qty</th>
+                    </tr>
+                    <tr className="text-[10px]">
+                      <th className="px-3 py-2 text-center font-semibold">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily / Rem. / %</th>
+                      <th className="px-3 py-2 text-center font-semibold border-l border-slate-200">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily / Rem. / %</th>
+                      <th className="px-3 py-2 text-center font-semibold border-l border-slate-200">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {dailyProgressRows.map((row) => {
+                      const rowClass = row.grand ? 'bg-slate-900 text-white font-bold' : 'bg-white';
+                      const badgeClass = row.grand ? 'bg-white/10 text-white border-white/20' : row.tone === 'blue' ? 'bg-blue-50 text-blue-700 border-blue-200' : row.tone === 'violet' ? 'bg-violet-50 text-violet-700 border-violet-200' : row.tone === 'emerald' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : row.tone === 'amber' ? 'bg-amber-50 text-amber-700 border-amber-200' : 'bg-slate-100 text-slate-700 border-slate-200';
+                      const textClass = row.grand ? 'text-white' : 'text-slate-900';
+                      const subClass = row.grand ? 'text-white/80' : 'text-slate-600';
+                      return (
+                        <tr key={row.label} className={rowClass}>
+                          <td className={`px-3 py-3 font-semibold ${textClass}`}>
+                            <div className="flex items-center gap-2">
+                              <span className={`inline-flex rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${badgeClass}`}>{row.grand ? 'Grand' : row.tone}</span>
+                              <span>{row.label}</span>
+                            </div>
+                          </td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.wdi.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.wdi.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.wdi.daily)} / {formatCount(row.wdi.remaining)} / {formatProgress(row.wdi.progress)}</td>
+                          <td className={`px-3 py-3 text-center font-mono border-l border-slate-200 ${textClass}`}>{formatCount(row.pipe.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.pipe.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.pipe.daily)} / {formatCount(row.pipe.remaining)} / {formatProgress(row.pipe.progress)}</td>
+                          <td className={`px-3 py-3 text-center font-mono border-l border-slate-200 ${textClass}`}>{formatCount(row.joints.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.joints.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.joints.daily)}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section className="rounded-[24px] border border-slate-200 bg-white shadow-sm overflow-hidden break-inside-avoid">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200 bg-slate-50/80 px-4 py-3 print:bg-white">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Coating & Joint Progress</p>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2 mt-1"><i data-lucide="layers-3" style={{ width: 18, height: 18 }} className="text-violet-600" /> Piping Total External Coating and Internal Lining</h2>
+                </div>
+                <div className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[11px] font-bold text-violet-700 w-fit">FBE / LE / 3L HDPE joint coating</div>
+              </div>
+              <div className="overflow-x-auto print:text-[10px]">
+                <table className="w-full min-w-[1100px] text-[11px] sm:text-xs text-left">
+                  <thead className="bg-slate-100 text-slate-700 uppercase tracking-[0.08em] border-b border-slate-200">
+                    <tr>
+                      <th rowSpan="2" className="px-3 py-3 font-bold text-slate-900 align-middle">Activity</th>
+                      <th colSpan="2" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-violet-700">Total Joints</th>
+                      <th colSpan="4" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-blue-700">FBE</th>
+                      <th colSpan="4" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-emerald-700">Liquid Epoxy</th>
+                      <th colSpan="4" className="px-3 py-2 text-center border-l border-slate-200 font-bold text-amber-700">3L HDPE / External</th>
+                    </tr>
+                    <tr className="text-[10px]">
+                      <th className="px-3 py-2 text-center font-semibold">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold border-l border-slate-200">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Prev</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily / %</th>
+                      <th className="px-3 py-2 text-center font-semibold border-l border-slate-200">Total</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Prev</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily</th>
+                      <th className="px-3 py-2 text-center font-semibold border-l border-slate-200">HDPE</th>
+                      <th className="px-3 py-2 text-center font-semibold">Epoxy Above Ground</th>
+                      <th className="px-3 py-2 text-center font-semibold">Completed</th>
+                      <th className="px-3 py-2 text-center font-semibold">Prev</th>
+                      <th className="px-3 py-2 text-center font-semibold">Daily / Rem.</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {coatingProgressRows.map((row) => {
+                      const rowClass = row.grand ? 'bg-slate-900 text-white font-bold' : 'bg-white';
+                      const badgeClass = row.grand ? 'bg-white/10 text-white border-white/20' : row.tone === 'blue' ? 'bg-blue-50 text-blue-700 border-blue-200' : row.tone === 'violet' ? 'bg-violet-50 text-violet-700 border-violet-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200';
+                      const textClass = row.grand ? 'text-white' : 'text-slate-900';
+                      const subClass = row.grand ? 'text-white/80' : 'text-slate-600';
+                      return (
+                        <tr key={row.label} className={rowClass}>
+                          <td className={`px-3 py-3 font-semibold ${textClass}`}>
+                            <div className="flex items-center gap-2"><span className={`inline-flex rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${badgeClass}`}>{row.grand ? 'Grand' : row.tone}</span><span>{row.label}</span></div>
+                          </td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.joints.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.joints.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono border-l border-slate-200 ${textClass}`}>{formatCount(row.fbe.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.fbe.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.fbe.prev)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.fbe.daily)} / {formatProgress(row.fbe.progress)}</td>
+                          <td className={`px-3 py-3 text-center font-mono border-l border-slate-200 ${textClass}`}>{formatCount(row.liquidEpoxy.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.liquidEpoxy.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.liquidEpoxy.prev)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.liquidEpoxy.daily)}</td>
+                          <td className={`px-3 py-3 text-center font-mono border-l border-slate-200 ${textClass}`}>{formatCount(row.coverage.hdpeUnderground)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.coverage.epoxyAboveGround)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.external.completed)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.external.prev)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.external.daily)} / {formatCount(row.external.remaining)}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section className="rounded-[24px] border border-slate-200 bg-white shadow-sm overflow-hidden break-inside-avoid">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200 bg-slate-50/80 px-4 py-3 print:bg-white">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Pipe Material Logistics</p>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2 mt-1"><i data-lucide="truck" style={{ width: 18, height: 18 }} className="text-emerald-600" /> Logistics / material delivery lower table</h2>
+                </div>
+                <div className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-bold text-emerald-700 w-fit">Shipped / delivered / remaining</div>
+              </div>
+              <div className="overflow-x-auto print:text-[10px]">
+                <table className="w-full min-w-[1180px] text-[11px] sm:text-xs text-left">
+                  <thead className="bg-slate-100 text-slate-700 uppercase tracking-[0.08em] border-b border-slate-200">
+                    <tr>
+                      <th className="px-3 py-3 font-bold text-slate-900">Category</th>
+                      <th className="px-3 py-3 text-center font-semibold">Total</th>
+                      <th className="px-3 py-3 text-center font-semibold">Shipped Juranah</th>
+                      <th className="px-3 py-3 text-center font-semibold">Other</th>
+                      <th className="px-3 py-3 text-center font-semibold">Shipped APCO</th>
+                      <th className="px-3 py-3 text-center font-semibold">Delivered APCO</th>
+                      <th className="px-3 py-3 text-center font-semibold">Delivered Valve</th>
+                      <th className="px-3 py-3 text-center font-semibold">Remaining</th>
+                      <th className="px-3 py-3 text-center font-semibold">Progress</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {pipeMaterialLogisticsRows.map((row) => {
+                      if (row.kind === 'group') {
+                        return (
+                          <tr key={row.label} className="bg-slate-50">
+                            <td colSpan="9" className="px-3 py-2 font-bold text-slate-800 uppercase tracking-[0.08em] text-[10px]">{row.label}</td>
+                          </tr>
+                        );
+                      }
+                      const isGrand = row.kind === 'grand';
+                      const rowClass = isGrand ? 'bg-slate-900 text-white font-bold' : 'bg-white';
+                      const textClass = isGrand ? 'text-white' : 'text-slate-900';
+                      const subClass = isGrand ? 'text-white/80' : 'text-slate-600';
+                      return (
+                        <tr key={row.label} className={rowClass}>
+                          <td className={`px-3 py-3 font-semibold ${textClass}`}>{row.label}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.total)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.shippedJuranah)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.other)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.shippedApco)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.deliveredApco)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${subClass}`}>{formatCount(row.deliveredValve)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}>{formatCount(row.remaining)}</td>
+                          <td className={`px-3 py-3 text-center font-mono ${textClass}`}><div className="inline-flex items-center gap-2"><div className="w-16 h-2 rounded-full bg-slate-200 overflow-hidden"><div className="h-full bg-emerald-500 print-color-adjust" style={{ width: `${row.progress}%` }}></div></div><span>{formatProgress(row.progress)}</span></div></td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
 
           <div className="mb-8 mt-1 break-inside-avoid">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
@@ -8024,11 +8351,11 @@
       const tankOverallErectRemaining = Math.max(0, Math.round(tankSummary.totalErect - tankSummary.actualErect));
       const tankOverallWeldRemaining = Math.max(0, Math.round(tankSummary.totalWeld - tankSummary.actualWeld));
       const tankOverallStatus = {
-    "dateLabel": "21 April 2026",
-    "courseCompleted": 128,
+    "dateLabel": "24 April 2026",
+    "courseCompleted": 123,
     "courseTotal": 136,
-    "coursePct": 94.12,
-    "courseRemaining": 8,
+    "coursePct": 90.44,
+    "courseRemaining": 13,
     "erected": 30260,
     "erectTotal": 32972,
     "erectPct": 91.77,
@@ -8090,10 +8417,10 @@
               <button onClick={scrollToTop} className="no-print flex items-center gap-1 text-xs text-slate-600 hover:text-blue-600 transition-colors"><i data-lucide="arrow-up" style={{ width: 14, height: 14 }} /> Back to Cover</button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6 break-inside-avoid">
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Total Occupied Bed</span><span className="text-2xl font-bold text-slate-900 flex items-center gap-2 text-center"><i data-lucide="bed-double" style={{ width: 20, height: 20 }} /> {occupiedBeds.toLocaleString()}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">HR Personnel Total</span><span className="text-2xl font-bold text-slate-900 flex items-center gap-2 text-center"><i data-lucide="users" style={{ width: 20, height: 20 }} /> {occupiedBeds.toLocaleString()}</span></div>
               <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Vacant Beds</span><span className="text-2xl font-bold text-green-600 flex items-center gap-2 text-center"><i data-lucide="bed-double" style={{ width: 20, height: 20 }} /> {personnelSummary.empty}</span></div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Turkish Staff</span><span className="text-2xl font-bold text-red-600 flex items-center gap-2 text-center"><i data-lucide="flag" style={{ width: 20, height: 20 }} /> {personnelSummary.turkish}</span></div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Foreign (TCN)</span><span className="text-2xl font-bold text-blue-600 flex items-center gap-2 text-center"><i data-lucide="user" style={{ width: 20, height: 20 }} /> {personnelSummary.tcn}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">MAPA Personnel</span><span className="text-2xl font-bold text-red-600 flex items-center gap-2 text-center"><i data-lucide="hard-hat" style={{ width: 20, height: 20 }} /> {personnelSummary.mapa}</span></div>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center min-w-0"><span className="text-xs text-slate-600 font-bold uppercase mb-1 text-center">Rental + Subcon</span><span className="text-2xl font-bold text-blue-600 flex items-center gap-2 text-center"><i data-lucide="user" style={{ width: 20, height: 20 }} /> {personnelSummary.rentalSubcon}</span></div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               <div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 overflow-hidden break-inside-avoid">
@@ -8117,17 +8444,17 @@
                   <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center">
                     <span className="text-[10px] text-slate-600 font-bold uppercase mb-1">Direct</span>
                     <span className="text-xl font-bold text-slate-900 flex items-center gap-1"><i data-lucide="wrench" style={{ width: 16, height: 16 }} className="text-blue-600" /> {departmentData.reduce((a, b) => a + b.total.d, 0).toLocaleString()}</span>
-                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.d, 0) / personnelSummary.total) * 100).toFixed(0)}% of Total</span>
+                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.d, 0) / personnelSummary.total) * 100).toFixed(1)}% of Total</span>
                   </div>
                   <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center">
                     <span className="text-[10px] text-slate-600 font-bold uppercase mb-1">Indirect</span>
                     <span className="text-xl font-bold text-blue-600 flex items-center gap-1"><i data-lucide="briefcase" style={{ width: 16, height: 16 }} className="text-slate-500" /> {departmentData.reduce((a, b) => a + b.total.i, 0).toLocaleString()}</span>
-                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.i, 0) / personnelSummary.total) * 100).toFixed(0)}% of Total</span>
+                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.i, 0) / personnelSummary.total) * 100).toFixed(1)}% of Total</span>
                   </div>
                   <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center justify-center">
                     <span className="text-[10px] text-slate-600 font-bold uppercase mb-1">Service</span>
                     <span className="text-xl font-bold text-orange-600 flex items-center gap-1"><i data-lucide="users" style={{ width: 16, height: 16 }} className="text-orange-500" /> {departmentData.reduce((a, b) => a + b.total.s, 0).toLocaleString()}</span>
-                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.s, 0) / personnelSummary.total) * 100).toFixed(0)}% of Total</span>
+                    <span className="text-[9px] text-slate-500 mt-0.5">{((departmentData.reduce((a, b) => a + b.total.s, 0) / personnelSummary.total) * 100).toFixed(1)}% of Total</span>
                   </div>
                 </div>
                 <div className="overflow-x-auto">
@@ -9111,13 +9438,13 @@
                           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                           <XAxis dataKey="month" tick={{ fontSize: 11, fontWeight: 'bold' }} stroke="#94a3b8" interval="preserveStartEnd" minTickGap={14} angle={-45} textAnchor="end" height={40} />
                           <YAxis yAxisId="left" orientation="left" stroke="#0891b2" label={{ value: 'Ton', angle: -90, position: 'insideLeft' }} />
-                          <YAxis yAxisId="right" orientation="right" stroke="#db2777" label={{ value: 'm', angle: 90, position: 'insideRight' }} />
+                          <YAxis yAxisId="right" orientation="right" stroke="#db2777" label={{ value: 'Course', angle: 90, position: 'insideRight' }} allowDecimals={false} />
                           <Tooltip />
                           <Legend wrapperStyle={{ fontSize: '10px' }} />
                           <Bar yAxisId="left" dataKey="erectionTon" name="Monthly Erection (Ton)" fill={COLORS.shellErect} radius={[4, 4, 0, 0]} barSize={40}>
                             <LabelList dataKey="erectionTon" position="top" content={<CustomBarLabel />} />
                           </Bar>
-                          <Line yAxisId="right" type="monotone" dataKey="weldingM" name="Monthly Course (Qty)" stroke={COLORS.shellWeld} strokeWidth={3} dot={{ r: 6 }} />
+                          <Line yAxisId="right" type="monotone" dataKey="courseQty" name="Monthly Course (Qty)" stroke={COLORS.shellWeld} strokeWidth={3} dot={{ r: 6 }} />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>
